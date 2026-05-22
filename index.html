@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Imperador Home Design · Materiais da reunião 22/05</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --ink-soft: #3d3d3d;
+    --muted: #7a7a7a;
+    --line: #e5e0d8;
+    --accent: #8b6f47;
+    --bg: #faf7f2;
+    --bg-soft: #f0e9dd;
+    --paper: #ffffff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+  .page {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 80px 56px 96px;
+  }
+  .eyebrow {
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-size: 38px;
+    line-height: 1.15;
+    margin: 0 0 16px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .subtitle {
+    font-size: 17px;
+    color: var(--muted);
+    margin-bottom: 56px;
+    max-width: 540px;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .card {
+    background: var(--paper);
+    border-left: 3px solid var(--accent);
+    padding: 26px 30px;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .card:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  .card-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .card-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--ink);
+  }
+  .card-desc {
+    font-size: 14px;
+    color: var(--ink-soft);
+  }
+  .card-arrow {
+    float: right;
+    color: var(--accent);
+    font-size: 20px;
+    margin-top: -28px;
+  }
+  footer {
+    margin-top: 72px;
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 12px;
+    font-style: italic;
+  }
+  @media (max-width: 640px) {
+    .page { padding: 48px 28px; }
+    h1 { font-size: 28px; }
+    .card { padding: 22px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="eyebrow">Imperador Home Design · 22 de maio de 2026</div>
+  <h1>Materiais da reunião<br>de apresentação da Fase 1</h1>
+  <p class="subtitle">Documento estratégico apresentado e ata da reunião. Clique para abrir cada um.</p>
+
+  <div class="cards">
+    <a class="card" href="estrategia.html">
+      <span class="card-arrow">→</span>
+      <div class="card-label">Documento estratégico</div>
+      <div class="card-title">Estratégia de Marca · V1</div>
+      <div class="card-desc">Apresentação completa em 11 capítulos. Da pesquisa 3Cs à tagline.</div>
+    </a>
+
+    <a class="card" href="ata.html">
+      <span class="card-arrow">→</span>
+      <div class="card-label">Ata de reunião</div>
+      <div class="card-title">Ata · Apresentação da Fase 1</div>
+      <div class="card-desc">Registro das decisões, pontos discutidos e próximos passos.</div>
+    </a>
+  </div>
+
+  <footer>
+    Consultoria de marca · ASD Comunicação · Adriano Domingues
+  </footer>
+</div>
+</body>
+</html>
