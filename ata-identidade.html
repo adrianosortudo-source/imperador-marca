@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ata · Apresentação dos Territórios Visuais · Imperador Home Design</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --ink-soft: #3d3d3d;
+    --muted: #7a7a7a;
+    --line: #e5e0d8;
+    --accent: #8b6f47;
+    --accent-soft: #c4a87a;
+    --bg: #faf7f2;
+    --bg-soft: #f0e9dd;
+    --warning: #c0392b;
+    --paper: #ffffff;
+    --success: #4a7c59;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 64px 56px 96px;
+    background: var(--paper);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+
+  header.cover {
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 28px;
+    margin-bottom: 40px;
+  }
+
+  .eyebrow {
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  h1 {
+    font-size: 34px;
+    line-height: 1.15;
+    margin: 0 0 12px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .meta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 22px;
+  }
+
+  .meta-item {
+    border-left: 2px solid var(--accent);
+    padding-left: 12px;
+  }
+
+  .meta-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    margin-bottom: 4px;
+    font-weight: 600;
+  }
+
+  .meta-value {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  section {
+    margin: 44px 0;
+  }
+
+  section.first {
+    margin-top: 0;
+  }
+
+  h2 {
+    font-size: 22px;
+    line-height: 1.3;
+    margin: 0 0 18px;
+    font-weight: 700;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  h2 .num {
+    color: var(--accent);
+    font-weight: 500;
+    margin-right: 10px;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+  }
+
+  h3 {
+    font-size: 15px;
+    margin: 24px 0 8px;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    margin: 0 0 12px;
+  }
+
+  p.lede {
+    font-size: 17px;
+    color: var(--ink);
+  }
+
+  strong { color: var(--ink); font-weight: 600; }
+
+  ul, ol {
+    margin: 8px 0 14px 22px;
+    color: var(--ink-soft);
+  }
+  ul li, ol li {
+    padding: 6px 0;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 14px;
+  }
+  th, td {
+    text-align: left;
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  th {
+    background: var(--bg-soft);
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+  }
+  td.right, th.right { text-align: right; }
+  td.centered { text-align: center; }
+
+  .pill {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .pill.done { background: var(--success); color: #fff; }
+  .pill.next { background: var(--bg-soft); color: var(--accent); }
+  .pill.warn { background: #fdf3f1; color: var(--warning); }
+
+  .callout {
+    background: var(--bg-soft);
+    border-left: 3px solid var(--accent);
+    padding: 18px 22px;
+    border-radius: 0 6px 6px 0;
+    margin: 18px 0;
+  }
+  .callout strong { color: var(--accent); }
+
+  .callout.warn {
+    background: #fdf3f1;
+    border-left-color: var(--warning);
+  }
+  .callout.warn strong { color: var(--warning); }
+
+  .participants {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 8px 0;
+  }
+  .participant {
+    background: var(--bg);
+    padding: 14px 18px;
+    border-radius: 6px;
+    border-top: 3px solid var(--accent);
+  }
+  .participant .name {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+  .participant .role {
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .next-steps {
+    list-style: none;
+    counter-reset: step;
+    margin: 0;
+    padding: 0;
+  }
+  .next-steps li {
+    counter-increment: step;
+    padding: 14px 0 14px 48px;
+    border-bottom: 1px solid var(--line);
+    position: relative;
+    list-style: none;
+  }
+  .next-steps li:last-child { border-bottom: none; }
+  .next-steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .next-steps .meta-step {
+    display: block;
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 4px;
+    font-weight: 500;
+  }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+  }
+
+  @media print {
+    body { background: #fff; }
+    .page { box-shadow: none; padding: 32px; max-width: none; }
+    section { page-break-inside: avoid; }
+  }
+
+  @media (max-width: 640px) {
+    .page { padding: 32px 24px; }
+    h1 { font-size: 26px; }
+    .meta, .participants { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="cover">
+  <div class="eyebrow">Ata de Reunião · Apresentação dos Territórios Visuais</div>
+  <h1>Imperador Home Design<br>Fase 2 · Identidade Visual (Territórios)</h1>
+  <div class="meta">
+    <div class="meta-item">
+      <div class="meta-label">Data</div>
+      <div class="meta-value">06/06/2026</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">Horário</div>
+      <div class="meta-value">Manhã</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">Duração</div>
+      <div class="meta-value">cerca de 90 min</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">Formato</div>
+      <div class="meta-value">Videoconferência</div>
+    </div>
+  </div>
+</header>
+
+<section class="first">
+  <h2><span class="num">01</span>Resumo executivo</h2>
+  <p class="lede">Reunião de abertura da Fase 2: apresentação de três propostas de território de identidade visual (O Arquivo, O Atelier e A Casa Aberta), construídas sobre a estratégia aprovada e sobre o estudo de sete marcas premium de referência. A tagline <strong>"Para a casa que você sonhou"</strong> foi escolhida em reunião e entra no brand book como decisão tomada. A escolha do território fica para a próxima semana: primeira impressão entre o Território 1 e o Território 3, com mais peso no 3 (A Casa Aberta). O Atelier foi descartado por concentrar a comunicação demais na figura da Andreia. Adriano envia o link do material ainda hoje para revisão com a equipe.</p>
+</section>
+
+<section>
+  <h2><span class="num">02</span>Participantes</h2>
+  <div class="participants">
+    <div class="participant">
+      <div class="name">Andreia Silva</div>
+      <div class="role">Fundadora · Decisora principal</div>
+    </div>
+    <div class="participant">
+      <div class="name">Rafael Ramos</div>
+      <div class="role">Contato operacional</div>
+    </div>
+    <div class="participant">
+      <div class="name">Adriano Domingues</div>
+      <div class="role">Consultor estratégico</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">03</span>Pauta coberta</h2>
+  <ol>
+    <li>Devolutiva da estratégia: conteúdo aprovado pela cliente, tagline em aberto na entrada da reunião</li>
+    <li>Recap do estado atual da marca (logo, paleta, tipografia, fotografia, voz)</li>
+    <li>Análise do feed 2026: sete pautas de conteúdo identificadas, com volume e participação de cada uma</li>
+    <li>Critérios de decisão: a promessa da marca como filtro principal, mais os seis critérios do checklist (materializa os trunfos, curadora com rosto sem culto à fundadora, escala em formatos pequenos, eleva sem afastar, evita o clichê premium, a operação aguenta)</li>
+    <li>Estudo de sete marcas-âncora premium, uma por pauta: EyeSwoon (fundadora), Apparatus (produto), Fritz Hansen (evento), Architectural Digest (convidado), Carl Hansen (operação), Aramis (promocional), deVOL Kitchens (projeto entregue)</li>
+    <li>Os quatro códigos em comum: disciplina tipográfica, nome próprio sobre adjetivo, séries permanentes em vez de posts soltos, gramática editorial e não comercial</li>
+    <li>Apresentação dos três territórios: O Arquivo, O Atelier e A Casa Aberta (paleta, tipografia, elemento de assinatura, overlays de Instagram, aplicações offline e opções de logo de cada um)</li>
+    <li>Tagline: retomada das três opções e decisão</li>
+    <li>Próximos passos</li>
+  </ol>
+</section>
+
+<section>
+  <h2><span class="num">04</span>Decisões formalizadas</h2>
+
+  <h3>Tagline definida · "Para a casa que você sonhou"</h3>
+  <p>Andreia trouxe o retorno da equipe da loja sobre as três opções apresentadas na Fase 1: a maioria escolheu a opção 1, <strong>"Para a casa que você sonhou"</strong>, incluindo o irmão Iago. Rafael validou a escolha e Andreia confirmou em reunião. Adriano registra a decisão no brand book. A dúvida sobre clínicas e escritórios (ver seção 05) foi discutida e resolvida a favor da tagline.</p>
+
+  <h3>Coroa preservada · refino só no wordmark</h3>
+  <p>A coroa permanece intacta, conforme o brief original. Rafael levantou a percepção de que o formato lembra coroa de rainha; o ponto foi discutido e encerrado sem mudança: a coroa é do cargo, não da pessoa, e Andreia declarou gostar dela e considerá-la representativa. A recomendação do Adriano, aceita como direção: <strong>mudar apenas a fonte do wordmark "Imperador Home Design"</strong>, dentro do território escolhido. Mudança mínima, perceptível, sem disrupção.</p>
+
+  <h3>Território · entre o 1 e o 3, com mais peso no 3</h3>
+  <p>Primeira impressão registrada em reunião, sem decisão final:</p>
+  <table>
+    <thead>
+      <tr><th>Território</th><th>Trunfo âncora</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1 · O Arquivo</td><td>Atendimento que reconhece (registro vivo das casas)</td><td>Em avaliação · Andreia gostou do tratamento "Família Marcos"</td></tr>
+      <tr><td>2 · O Atelier</td><td>Curadoria com rosto (oficina pessoal da curadora)</td><td>Descartado · concentra demais na figura da Andreia</td></tr>
+      <tr><td>3 · A Casa Aberta</td><td>A casa que recebe (interior habitado, hora dourada)</td><td>Favorito · considerado o mais completo</td></tr>
+    </tbody>
+  </table>
+  <p>Razões do descarte do Atelier, nas palavras da Andreia: "fica muita coisa só eu" e a dependência permanente da presença dela na comunicação; ela quer dividir o protagonismo. A fonte manuscrita também foi considerada inadequada para a loja. Pontos do Arquivo que ela quer avaliar trazer para a Casa Aberta: o tratamento de projeto entregue com nome de família ("Família Marcos"). Decisão final na próxima reunião, após revisão do material com a equipe.</p>
+
+  <h3>Pedido do Rafael para as opções de logo</h3>
+  <p>Na rodada de refinamento do logotipo final, incluir variação em caixa alta e explorar detalhes tipográficos no wordmark (referência citada: o detalhe no "ar" do logo da Adriana Ar). Entra no feedback consolidado que a loja vai devolver.</p>
+</section>
+
+<section>
+  <h2><span class="num">05</span>Pontos de contexto e nuances</h2>
+
+  <h3>Slogan atual "ambientes envolventes" · sem decisão</h3>
+  <p>Na abertura, Andreia disse que ainda não fechou na cabeça se troca o slogan atual, que já tem uso falado pela equipe. O tema ficou explicitamente fora da pauta do dia. Na prática, a decisão da tagline "Para a casa que você sonhou" ao fim da reunião responde a questão; cabe confirmar com a cliente que a nova tagline substitui o uso de "ambientes envolventes" nas aplicações.</p>
+
+  <h3>A dor da promoção · guerra de descontos regional</h3>
+  <p>Andreia relatou que lojas de alto padrão da região operam com 50% a 70% de desconto e que isso virou régua do mercado: na semana da reunião, perdeu a venda da mesa e do sofá de uma casa que atendeu porque o cliente comprou essas peças com 60% de desconto na Casa Bonita, e precisou se virar para manter o restante da curadoria. Ela não quer entrar nessa briga, mas reconhece que às vezes é obrigada a responder. O exemplo da Aramis (evento próprio "Best Friday", marca antes do desconto, campanha com conceito) foi recebido como referência viável de meio-termo. Observação registrada: as marcas premium tiram os posts promocionais do feed quando a promoção acaba; o desconto não vira acervo.</p>
+
+  <h3>Coleções nomeadas · ativo já existente</h3>
+  <p>A Imperador já lança duas coleções nomeadas por ano (atual: Aviva), com coquetel de lançamento e pegada de loja inteira. Andreia afirma não conhecer outra loja do segmento que faça isso. A próxima coleção está propositalmente em espera para coincidir com a expectativa da mudança para a nova loja. O mecanismo conversa diretamente com o código "nome próprio sobre adjetivo" e com a ideia de projetos entregues nomeados, que ela aprovou ("gostei dessa ideia, muito boa").</p>
+
+  <h3>Projeto entregue com nome · concorrente já faz</h3>
+  <p>Rafael citou concorrente local nomeando casas entregues ("Casa LG", de Luciano Guimarães). Reforça a urgência de a Imperador formalizar o próprio padrão de nomeação dentro do território escolhido, com a vantagem de fazê-lo dentro de um sistema de identidade completo.</p>
+
+  <h3>Clínicas e escritórios · tagline validada para o público</h3>
+  <p>Dúvida levantada por Andreia e pelo Vinícius: a loja também atende clínicas e escritórios, e a tagline fala de casa. O próprio grupo resolveu o ponto na conversa: clínicas e escritórios hoje querem cara de casa, o movimento do mercado é trazer o aconchego residencial para esses espaços, e esse público não é o foco da comunicação. Rafael complementou que clínica não busca loja específica de mobiliário corporativo. O ponto não bloqueia a tagline.</p>
+
+  <h3>Correção de registro · Vinícius é vendedor</h3>
+  <p>A pessoa da equipe que aparece nos posts é o <strong>Vinícius, vendedor</strong>. O gerente é o Marciano. Corrigir a nomenclatura da pauta "gerência" nos materiais seguintes.</p>
+
+  <h3>Quiet luxury · contexto trazido pelo Rafael</h3>
+  <p>Rafael citou o movimento da Aramis (e da Lacoste) de esconder a marca na peça para atender o público premium que não quer exibir logo. Andreia se identificou com o comportamento. Sinal alinhado com a direção "elevar sem afastar" e com a sobriedade dos territórios propostos.</p>
+
+  <h3>Iluminação da nova loja</h3>
+  <p>Ao ver a aplicação de fachada da Casa Aberta (luz âmbar, clima de entardecer), Andreia comentou que o projeto de iluminação da nova loja está em andamento e que a proposta coincide com o que ela havia imaginado. Ponto de sinergia concreto entre o território 3 e a mudança de prédio.</p>
+
+  <h3>Gravação com convidado · agenda em ajuste</h3>
+  <p>Convidado confirmou interesse em participar da gravação, mas não pode na quarta-feira; sexta só no fim da tarde, o que não dá tempo. Andreia aguarda nova data e Rafael ficou de alinhar com o João. Tema operacional, fora do escopo desta ata, registrado para acompanhamento.</p>
+</section>
+
+<section>
+  <h2><span class="num">06</span>Próximos passos</h2>
+  <ol class="next-steps">
+    <li>
+      <strong>Adriano compartilha o link da apresentação dos territórios</strong> com Rafael e Andreia para revisão calma com a equipe da loja.
+      <span class="meta-step">Responsável: Adriano · Prazo: ainda hoje (06/06), à tarde</span>
+    </li>
+    <li>
+      <strong>Cliente devolve feedback consolidado por escrito</strong> com a escolha do território e os ajustes desejados (incluindo elementos do Arquivo a trazer para a Casa Aberta e as variações de logo pedidas pelo Rafael).
+      <span class="meta-step">Responsáveis: Andreia + Rafael · Prazo: antes da próxima reunião</span>
+    </li>
+    <li>
+      <strong>Adriano registra a tagline "Para a casa que você sonhou" no brand book</strong> como decisão tomada e alinha a substituição do slogan atual nas aplicações.
+      <span class="meta-step">Responsável: Adriano · Prazo: junto com a próxima versão do material</span>
+    </li>
+    <li>
+      <strong>Adriano corrige a nomenclatura da pauta "gerência"</strong> (Vinícius é vendedor; gerente é Marciano) e ajusta os pontos de acabamento sinalizados (contraste do território 3, mockups pendentes de atualização).
+      <span class="meta-step">Responsável: Adriano · Prazo: antes da decisão final</span>
+    </li>
+    <li>
+      <strong>Reunião de decisão do território</strong> para fechar o caminho da identidade visual e abrir a produção do brand book.
+      <span class="meta-step">Responsáveis: Andreia + Rafael + Adriano · Prazo alvo: semana de 08/06</span>
+    </li>
+  </ol>
+</section>
+
+<section>
+  <h2><span class="num">07</span>Observações finais</h2>
+  <div class="callout">
+    <p>Reunião encerrada dentro do tempo previsto, com uma decisão estrutural fechada (tagline) e a segunda bem encaminhada (território, entre 1 e 3 com favoritismo do 3). Os três territórios foram considerados aderentes à estratégia; a escolha agora é de identificação, não de correção. O ritmo da Fase 2 depende da devolutiva consolidada da loja na próxima semana.</p>
+  </div>
+</section>
+
+<footer>
+  Ata gerada com base no transcript da reunião · Imperador Home Design · 6 de junho de 2026
+</footer>
+
+</div>
+</body>
+</html>
