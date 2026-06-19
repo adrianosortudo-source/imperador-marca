@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ata · Kick Off Imperador Home Design</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --ink-soft: #3d3d3d;
+    --muted: #7a7a7a;
+    --line: #e5e0d8;
+    --accent: #8b6f47;
+    --accent-soft: #c4a87a;
+    --bg: #faf7f2;
+    --bg-soft: #f0e9dd;
+    --warning: #c0392b;
+    --paper: #ffffff;
+    --success: #4a7c59;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 64px 56px 96px;
+    background: var(--paper);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+
+  header.cover {
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 28px;
+    margin-bottom: 40px;
+  }
+
+  .eyebrow {
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  h1 {
+    font-size: 34px;
+    line-height: 1.15;
+    margin: 0 0 12px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .meta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 22px;
+  }
+
+  .meta-item {
+    border-left: 2px solid var(--accent);
+    padding-left: 12px;
+  }
+
+  .meta-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    margin-bottom: 4px;
+    font-weight: 600;
+  }
+
+  .meta-value {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  section {
+    margin: 44px 0;
+  }
+
+  section.first {
+    margin-top: 0;
+  }
+
+  h2 {
+    font-size: 22px;
+    line-height: 1.3;
+    margin: 0 0 18px;
+    font-weight: 700;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  h2 .num {
+    color: var(--accent);
+    font-weight: 500;
+    margin-right: 10px;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+  }
+
+  h3 {
+    font-size: 15px;
+    margin: 24px 0 8px;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    margin: 0 0 12px;
+  }
+
+  p.lede {
+    font-size: 17px;
+    color: var(--ink);
+  }
+
+  strong { color: var(--ink); font-weight: 600; }
+
+  ul, ol {
+    margin: 8px 0 14px 22px;
+    color: var(--ink-soft);
+  }
+  ul li, ol li {
+    padding: 6px 0;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 14px;
+  }
+  th, td {
+    text-align: left;
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  th {
+    background: var(--bg-soft);
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+  }
+  td.right, th.right { text-align: right; }
+  td.centered { text-align: center; }
+
+  .pill {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .pill.done { background: var(--success); color: #fff; }
+  .pill.next { background: var(--bg-soft); color: var(--accent); }
+  .pill.warn { background: #fdf3f1; color: var(--warning); }
+
+  .callout {
+    background: var(--bg-soft);
+    border-left: 3px solid var(--accent);
+    padding: 18px 22px;
+    border-radius: 0 6px 6px 0;
+    margin: 18px 0;
+  }
+  .callout strong { color: var(--accent); }
+
+  .callout.warn {
+    background: #fdf3f1;
+    border-left-color: var(--warning);
+  }
+  .callout.warn strong { color: var(--warning); }
+
+  .participants {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 8px 0;
+  }
+  .participant {
+    background: var(--bg);
+    padding: 14px 18px;
+    border-radius: 6px;
+    border-top: 3px solid var(--accent);
+  }
+  .participant .name {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+  .participant .role {
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .next-steps {
+    list-style: none;
+    counter-reset: step;
+    margin: 0;
+    padding: 0;
+  }
+  .next-steps li {
+    counter-increment: step;
+    padding: 14px 0 14px 48px;
+    border-bottom: 1px solid var(--line);
+    position: relative;
+    list-style: none;
+  }
+  .next-steps li:last-child { border-bottom: none; }
+  .next-steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .next-steps .meta-step {
+    display: block;
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 4px;
+    font-weight: 500;
+  }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+  }
+
+  @media print {
+    body { background: #fff; }
+    .page { box-shadow: none; padding: 32px; max-width: none; }
+    section { page-break-inside: avoid; }
+  }
+
+  @media (max-width: 640px) {
+    .page { padding: 32px 24px; }
+    h1 { font-size: 26px; }
+    .meta, .participants { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="cover">
+  <div class="eyebrow">Ata de Reunião · Kick Off</div>
+  <h1>Imperador Home Design<br>Reposicionamento Estratégico de Marca</h1>
+  <div class="meta">
+    <div class="meta-item">
+      <div class="meta-label">Data</div>
+      <div class="meta-value">06/05/2026</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">Horário</div>
+      <div class="meta-value">13:01 — 13:32</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">Duração</div>
+      <div class="meta-value">31 minutos</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">Formato</div>
+      <div class="meta-value">Videoconferência</div>
+    </div>
+  </div>
+</header>
+
+<section class="first">
+  <h2><span class="num">01</span>Resumo executivo</h2>
+  <p class="lede">Reunião de kick off do projeto de reposicionamento de marca da Imperador Home Design. A pauta percorreu objetivos, escopo, metodologia, papéis, cronograma, combinados práticos e investimento, com decisões formalizadas e próximos passos definidos. Não houve discordâncias estruturais, e o projeto está autorizado a iniciar imediatamente, condicionado à assinatura do contrato e ao recebimento das respostas da entrevista de descoberta pela cliente.</p>
+</section>
+
+<section>
+  <h2><span class="num">02</span>Participantes</h2>
+  <div class="participants">
+    <div class="participant">
+      <div class="name">Andreia Silva</div>
+      <div class="role">Fundadora · Decisora principal</div>
+    </div>
+    <div class="participant">
+      <div class="name">Rafael Ramos</div>
+      <div class="role">Contato operacional</div>
+    </div>
+    <div class="participant">
+      <div class="name">Adriano Domingues</div>
+      <div class="role">Consultor estratégico</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">03</span>Pauta coberta</h2>
+  <ol>
+    <li>Objetivos do projeto</li>
+    <li>Escopo: o que está dentro e o que está fora</li>
+    <li>Metodologia e fases</li>
+    <li>Papéis e responsabilidades</li>
+    <li>Cronograma e marcos</li>
+    <li>Combinados práticos</li>
+    <li>Investimento</li>
+    <li>Próximos passos imediatos</li>
+  </ol>
+  <p style="font-size: 13px; color: var(--muted); margin-top: 8px;"><em>Observação: o slide de recap do diagnóstico foi pulado por questão técnica. Adriano se comprometeu a enviar o material em separado para validação formal.</em></p>
+</section>
+
+<section>
+  <h2><span class="num">04</span>Decisões formalizadas</h2>
+
+  <h3>Escopo do projeto</h3>
+  <p>Confirmado o pacote completo em duas etapas: <strong>Estratégia de Marca (Etapa 1)</strong> seguida de <strong>Identidade Visual + Brand Book (Etapa 2)</strong>. A estratégia precede a estética; nenhuma decisão visual será tomada antes da aprovação da Fase 1.</p>
+
+  <p><strong>Adição ao escopo proposta na reunião:</strong> Adriano sugeriu incluir uma <strong>camada estratégica de comunicação</strong> (pilares, temas, frequência, abordagem editorial), considerando que o Instagram é hoje o principal ponto de contato da marca. Esta inclusão será detalhada em alinhamento separado entre Adriano e Rafael.</p>
+
+  <h3>Sobre a logomarca</h3>
+  <p>O nome <strong>Imperador Home Design não muda</strong>. A discussão sobre evolução do logotipo (tipografia, estilização da coroa) acontece na Etapa 2, com base nas decisões da Etapa 1. Andreia confirmou que o novo prédio terá toda a aplicação visual reconstruída do zero, abrindo margem para evoluir a identidade nesta janela.</p>
+
+  <h3>Itens confirmados como fora do escopo</h3>
+  <ul>
+    <li>Website ou redesenho digital</li>
+    <li>Material de PDV e papelaria (cartão, embalagem, sacola, etiqueta)</li>
+    <li>Campanhas de mídia paga ou planejamento de marketing</li>
+    <li>Produção e calendário de conteúdo (fotos, vídeos, copy de posts, gestão de feed)</li>
+    <li>Naming (mantido)</li>
+    <li>Sinalização e arquitetura de loja</li>
+    <li>Implementação operacional do brand book (a cargo de Rafael e equipe interna)</li>
+  </ul>
+
+  <h3>Papéis e responsabilidades</h3>
+  <table>
+    <thead>
+      <tr><th>Função</th><th>Responsável</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Consultor estratégico</td><td>Adriano Domingues</td></tr>
+      <tr><td>Decisor principal (aprovações)</td><td>Andreia Silva</td></tr>
+      <tr><td>Respondente da entrevista de descoberta</td><td>Andreia Silva</td></tr>
+      <tr><td>Contato operacional (arquivos, agendamento, dúvidas)</td><td>Rafael Ramos</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Cronograma</h3>
+  <table>
+    <thead>
+      <tr><th>Marco</th><th>Responsável</th><th class="right">Data alvo</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Diagnóstico (concluído)</td><td>Cliente + Adriano</td><td class="right">já realizado</td></tr>
+      <tr><td>Kick off</td><td>Ambos</td><td class="right">06/05 (concluído)</td></tr>
+      <tr><td>Entrevista de descoberta respondida (GPT)</td><td>Andreia</td><td class="right">o quanto antes</td></tr>
+      <tr><td>Documento Estratégico entregue</td><td>Adriano</td><td class="right">5 dias úteis após entrevista</td></tr>
+      <tr><td>Apresentação da Fase 1</td><td>Adriano</td><td class="right">prevista 16/05</td></tr>
+      <tr><td>Brand Book entregue</td><td>Adriano</td><td class="right">10 dias úteis após aprovação Fase 1</td></tr>
+      <tr style="background: var(--bg-soft);"><td><strong>Encerramento estimado</strong></td><td><strong>Ambos</strong></td><td class="right"><strong>até 11/06</strong></td></tr>
+    </tbody>
+  </table>
+  <p style="font-size: 13px; color: var(--muted);"><em>O cronograma é o "mundo ideal", sem atrasos ou refações. Adriano comprometeu-se a manter a entrega dentro de junho mesmo com eventuais ajustes.</em></p>
+
+  <h3>Combinados práticos</h3>
+  <ul>
+    <li><strong>Canal principal:</strong> WhatsApp (consenso entre os três)</li>
+    <li><strong>Aprovações:</strong> sempre por escrito (WhatsApp serve, desde que seja explícito o "aprovado")</li>
+    <li><strong>Tempo de resposta esperado:</strong> até 24 horas úteis (nas duas pontas)</li>
+    <li><strong>Reuniões:</strong> agendadas com 48h de antecedência; agendamento centralizado em Adriano</li>
+    <li><strong>Política de refações:</strong> máximo 2 por etapa; a partir da 3ª, R$ 300 por refação adicional</li>
+  </ul>
+
+  <h3>Investimento</h3>
+  <table>
+    <tbody>
+      <tr><td><strong>Total do projeto</strong></td><td class="right"><strong>R$ 3.000,00</strong></td></tr>
+      <tr><td>Sinal (50%) na assinatura do contrato</td><td class="right">R$ 1.500,00</td></tr>
+      <tr><td>Saldo (50%) na entrega final</td><td class="right">R$ 1.500,00</td></tr>
+      <tr><td>Refação adicional (3ª em diante)</td><td class="right">R$ 300,00 cada</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2><span class="num">05</span>Pontos de contexto e nuances</h2>
+
+  <h3>Sobre a obra e a mudança de loja</h3>
+  <p>Andreia está construindo um prédio novo (mudança de loja, não abertura de unidade adicional). A previsão original era julho/2026, mas com obra financiada por recursos próprios e sem financiamento bancário, o ritmo está mais lento. Estimativa atual: <strong>mudança em outubro/2026</strong>. Aterramento, levantamento e cobertura concluídos; em fase de hidráulica e elétrica. Acabamento interno é o que tende a estender o prazo.</p>
+
+  <h3>Sobre o método de descoberta</h3>
+  <p>A entrevista estratégica de Fase 1 será conduzida por um GPT customizado desenvolvido por Adriano, em vez da reunião tradicional de 1h30-2h. A cliente responde no próprio tempo, podendo usar áudio. <strong>Andreia confirmou que sabe utilizar ChatGPT</strong> e aceitou o formato. Adriano destacou que o início da Fase 1 depende criticamente do recebimento das respostas — pediu priorização.</p>
+
+  <h3>Linha vermelha do projeto (reforçada na reunião)</h3>
+  <ol>
+    <li><strong>A estratégia precede a estética.</strong> Discussões sobre logotipo só na Fase 2.</li>
+    <li><strong>Decisões de marca são técnicas, não de gosto.</strong> Feedback de "não gostei" sem justificativa não é critério de ajuste; é necessário articular o motivo (ex: "não comunica X", "não reflete o gosto do meu cliente").</li>
+    <li><strong>Não há pacote ilimitado de revisões.</strong> Política de refações protege qualidade e prazo.</li>
+  </ol>
+</section>
+
+<section>
+  <h2><span class="num">06</span>Próximos passos</h2>
+  <ol class="next-steps">
+    <li>
+      <strong>Adriano envia contrato e nota fiscal</strong> de R$ 1.500 (sinal) por WhatsApp ao Rafael.
+      <span class="meta-step">Responsável: Adriano · Prazo: ainda hoje (06/05)</span>
+    </li>
+    <li>
+      <strong>Adriano envia o link do GPT de descoberta</strong> para Andreia (via Rafael).
+      <span class="meta-step">Responsável: Adriano · Prazo: ainda hoje (06/05)</span>
+    </li>
+    <li>
+      <strong>Cliente assina contrato eletronicamente e efetua pagamento do sinal</strong> de R$ 1.500.
+      <span class="meta-step">Responsável: Andreia · Prazo: ASAP</span>
+    </li>
+    <li>
+      <strong>Andreia responde a entrevista de descoberta</strong> no GPT (priorizar; pode responder por áudio).
+      <span class="meta-step">Responsável: Andreia · Prazo: ASAP — destrava a Fase 1</span>
+    </li>
+    <li>
+      <strong>Adriano envia recap do diagnóstico</strong> em formato separado para validação (substituindo o slide pulado na reunião).
+      <span class="meta-step">Responsável: Adriano · Prazo: nesta semana</span>
+    </li>
+    <li>
+      <strong>Adriano alinha com Rafael</strong> a inclusão da camada de estratégia de comunicação no escopo.
+      <span class="meta-step">Responsável: Adriano + Rafael · Prazo: nesta semana</span>
+    </li>
+    <li>
+      <strong>Apresentação da Fase 1</strong> (Documento Estratégico) — agendamento confirmado após recebimento da entrevista.
+      <span class="meta-step">Tentativa: 16/05/2026</span>
+    </li>
+  </ol>
+</section>
+
+<section>
+  <h2><span class="num">07</span>Observações finais</h2>
+  <div class="callout">
+    <p>Reunião encerrada com alinhamento entre todas as partes. Não houve pendências de decisão, apenas execução. A continuidade do cronograma depende exclusivamente da velocidade com que Andreia conseguir responder a entrevista de descoberta e formalizar o contrato.</p>
+  </div>
+</section>
+
+<footer>
+  Ata gerada com base no transcript da reunião · Imperador Home Design · 06 de maio de 2026
+</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enxoval de logos · Imperador Home Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;1,9..144,300&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --marinho: #15233D;
+  --mostarda: #C89A55;
+  --linho: #F5F0E8;
+  --paper: #FAF7F2;
+  --tinta: #1A1410;
+  --rule: #e5e0d8;
+  --mid: #6b5d50;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  background: var(--paper);
+  color: var(--tinta);
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 1100px; margin: 0 auto; padding: 60px 48px 100px; }
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--mostarda);
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  font-style: italic;
+  font-variation-settings: 'opsz' 144;
+  font-size: 64px;
+  line-height: 1;
+  letter-spacing: -0.018em;
+  color: var(--marinho);
+  margin-bottom: 16px;
+}
+h1 .dot { color: var(--mostarda); font-style: normal; }
+.lede {
+  font-size: 19px;
+  line-height: 1.55;
+  color: var(--tinta);
+  max-width: 65ch;
+  margin-bottom: 48px;
+}
+h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 28px;
+  color: var(--marinho);
+  margin: 56px 0 14px;
+  letter-spacing: -0.012em;
+}
+.section-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  color: var(--mostarda);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+.section-note {
+  font-size: 14.5px;
+  color: var(--mid);
+  margin-bottom: 24px;
+  max-width: 70ch;
+}
+.downloads {
+  background: var(--marinho);
+  color: var(--linho);
+  padding: 36px 44px;
+  margin: 12px 0 56px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+.dl-card {
+  background: rgba(245,240,232,0.04);
+  border: 1px solid rgba(200,154,85,0.32);
+  padding: 22px 24px;
+  text-decoration: none;
+  color: var(--linho);
+  transition: background 0.15s ease;
+}
+.dl-card:hover { background: rgba(245,240,232,0.08); }
+.dl-card .dl-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  color: var(--mostarda);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.dl-card .dl-title {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 24px;
+  color: var(--linho);
+  margin-bottom: 6px;
+  line-height: 1.15;
+}
+.dl-card .dl-meta {
+  font-size: 12.5px;
+  color: rgba(245,240,232,0.65);
+  line-height: 1.5;
+}
+.dl-card .dl-arrow {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--mostarda);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+}
+.versions-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  margin-top: 18px;
+}
+.version-card {
+  border: 1px solid var(--rule);
+  background: #fff;
+  overflow: hidden;
+}
+.version-card .preview {
+  aspect-ratio: 1.2/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+}
+.version-card.bg-marinho .preview { background: var(--marinho); }
+.version-card.bg-linho .preview { background: var(--linho); }
+.version-card.bg-paper .preview { background: var(--paper); }
+.version-card .preview img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.version-card .info { padding: 12px 14px 14px; border-top: 1px solid var(--rule); }
+.version-card .info .v-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8.5px;
+  letter-spacing: 0.18em;
+  color: var(--mostarda);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+.version-card .info .v-name {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--tinta);
+  margin-bottom: 4px;
+}
+.version-card .info .v-use {
+  font-size: 10.5px;
+  color: var(--mid);
+  line-height: 1.4;
+}
+.palette {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  margin: 18px 0 36px;
+}
+.swatch {
+  border: 1px solid var(--rule);
+  padding: 16px 14px;
+}
+.swatch .chip {
+  width: 100%;
+  height: 56px;
+  margin-bottom: 8px;
+  border: 1px solid var(--rule);
+}
+.swatch .name {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--tinta);
+}
+.swatch .hex {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.06em;
+  color: var(--mid);
+  margin-top: 3px;
+}
+.rules {
+  background: var(--linho);
+  padding: 28px 36px;
+  border-left: 4px solid var(--mostarda);
+  margin: 36px 0 24px;
+}
+.rules ol { padding-left: 20px; }
+.rules li {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--tinta);
+  margin-bottom: 10px;
+}
+.rules li strong { color: var(--marinho); }
+.footer {
+  margin-top: 64px;
+  padding-top: 18px;
+  border-top: 1px solid var(--rule);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  color: var(--mid);
+  text-transform: uppercase;
+}
+@media (max-width: 720px) {
+  .wrap { padding: 40px 24px 64px; }
+  h1 { font-size: 42px; }
+  .downloads { grid-template-columns: 1fr; }
+  .versions-grid { grid-template-columns: repeat(2, 1fr); }
+  .palette { grid-template-columns: repeat(3, 1fr); }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="eyebrow">Imperador Home Design · Junho 2026</div>
+  <h1>Enxoval de logos<span class="dot">.</span></h1>
+  <p class="lede">Pacote oficial de arquivos da marca, primeiro lote. Quatro famílias (coroa, wordmark, lockup completo, lockup com tagline), cinco versões cromáticas cada, em SVG vetorial e PNG transparente nas resoluções de favicon a cartaz. Para uso por arquitetos parceiros, fornecedores de papelaria, gráficas, agências de mídia e equipe interna.</p>
+
+  <!-- DOWNLOADS -->
+  <div class="downloads">
+    <a class="dl-card" href="imperador-home-design-logos-v1.zip" download>
+      <div class="dl-label">Pacote completo</div>
+      <div class="dl-title">Todos os arquivos · ZIP</div>
+      <div class="dl-meta">145 arquivos · 8,7 MB · 4 famílias × 5 cores × 6 resoluções + favicons + README com regras de uso.</div>
+      <div class="dl-arrow">↓ BAIXAR ZIP</div>
+    </a>
+    <a class="dl-card" href="enxoval-logos.html#specimen" >
+      <div class="dl-label">Apresentação visual</div>
+      <div class="dl-title">Specimen · vê e imprime</div>
+      <div class="dl-meta">Esta mesma página visual mostra as 20 variações lado a lado. Imprime via menu do navegador (Ctrl+P) para uma versão PDF de referência rápida.</div>
+      <div class="dl-arrow">↓ ROLAR PARA SPECIMEN</div>
+    </a>
+  </div>
+
+  <!-- SPECIMEN: 4 famílias -->
+  <div id="specimen"></div>
+
+  <div class="section-num">Família 01</div>
+  <h2>Coroa isolada</h2>
+  <p class="section-note">Símbolo isolado. Para favicon, watermark, etiqueta interna, hot-stamp, avatar pequeno, livro de visitas. Não substitui o lockup em primeiro contato com a marca.</p>
+  <div class="versions-grid">
+    <div class="version-card bg-marinho"><div class="preview"><img src="logos-assets/01_coroa/coroa_01_mostarda_576.png" alt="01 mostarda"></div><div class="info"><div class="v-num">01 · Mostarda</div><div class="v-name">Preferencial</div><div class="v-use">Mostarda sobre marinho</div></div></div>
+    <div class="version-card bg-linho"><div class="preview"><img src="logos-assets/01_coroa/coroa_02_marinho_576.png" alt="02 marinho"></div><div class="info"><div class="v-num">02 · Marinho</div><div class="v-name">Papelaria clara</div><div class="v-use">Marinho sobre linho</div></div></div>
+    <div class="version-card bg-paper"><div class="preview"><img src="logos-assets/01_coroa/coroa_03_tinta_576.png" alt="03 tinta"></div><div class="info"><div class="v-num">03 · Tinta</div><div class="v-name">Alto contraste</div><div class="v-use">Tinta sobre paper</div></div></div>
+    <div class="version-card bg-marinho"><div class="preview"><img src="logos-assets/01_coroa/coroa_04_destaque_576.png" alt="04 destaque"></div><div class="info"><div class="v-num">04 · Destaque</div><div class="v-name">Papelaria especial</div><div class="v-use">Mostarda sobre marinho</div></div></div>
+    <div class="version-card bg-marinho"><div class="preview"><img src="logos-assets/01_coroa/coroa_05_branco_576.png" alt="05 branco"></div><div class="info"><div class="v-num">05 · Branco</div><div class="v-name">Reverso</div><div class="v-use">Branco sobre marinho</div></div></div>
+  </div>
+
+  <div class="section-num">Família 02</div>
+  <h2>Wordmark</h2>
+  <p class="section-note">Apenas o nome em Fraunces italic com ponto mostarda e HOME DESIGN em mono. Para assinatura de e-mail, rodapé de site, faixa de vitrine, watermark, qualquer aplicação compacta.</p>
+  <div class="versions-grid">
+    <div class="version-card bg-marinho"><div class="preview"><img src="logos-assets/02_wordmark/wordmark_01_mostarda_576.png" alt="01 mostarda"></div><div class="info"><div class="v-num">01 · Mostarda</div><div class="v-name">Preferencial</div><div class="v-use">Linho + mostarda sobre marinho</div></div></div>
+    <div class="version-card bg-linho"><div class="preview"><img src="logos-assets/02_wordmark/wordmark_02_marinho_576.png" alt="02 marinho"></div><div class="info"><div class="v-num">02 · Marinho</div><div class="v-name">Papelaria clara</div><div class="v-use">Marinho sobre linho</div></div></div>
+    <div class="version-card bg-paper"><div class="preview"><img src="logos-assets/02_wordmark/wordmark_03_tinta_576.png" alt="03 tinta"></div><div class="info"><div class="v-num">03 · Tinta</div><div class="v-name">Alto contraste</div><div class="v-use">Tinta sobre paper</div></div></div>
+    <div class="version-card bg-marinho"><div class="preview"><img src="logos-assets/02_wordmark/wordmark_04_destaque_576.png" alt="04 destaque"></div><div class="info"><div class="v-num">04 · Destaque</div><div class="v-name">Papelaria especial</div><div class="v-use">Mostarda sobre marinho</div></div></div>
+    <div class="version-card bg-marinho"><div class="preview"><img src="logos-assets/02_wordmark/wordmark_05_branco_576.png" alt="05 branco"></div><div class="info"><div class="v-num">05 · Branco</div><div class="v-name">Reverso</div><div class="v-use">Branco sobre marinho</div></div></div>
+  </div>
+
+  <div class="section-num">Família 03</div>
+  <h2>Lockup completo</h2>
+  <p class="section-note">Coroa + wordmark. Aplicação principal da marca. Capa, fachada, papelaria institucional, perfil do Instagram, embalagem, qualquer aplicação onde a marca aparece em primeiro contato.</p>
+  <div class="versions-grid">
+    <div class="version-card bg-marinho"><div class="preview"><img src="logos-assets/03_lockup_completo/lockup_completo_01_mostarda_576.png" alt="01 mostarda"></div><div class="info"><div class="v-num">01 · Mostarda</div><div class="v-name">Preferencial</div><div class="v-use">Coroa + linho + mostarda sobre marinho</div></div></div>
+    <div class="version-card bg-linho"><div class="preview"><img src="logos-assets/03_lockup_completo/lockup_completo_02_marinho_576.png" alt="02 marinho"></div><div class="info"><div class="v-num">02 · Marinho</div><div class="v-name">Papelaria clara</div><div class="v-use">Marinho sobre linho</div></div></div>
+    <div class="version-card bg-paper"><div class="preview"><img src="logos-assets/03_lockup_completo/lockup_completo_03_tinta_576.png" alt="03 tinta"></div><div class="info"><div class="v-num">03 · Tinta</div><div class="v-name">Alto contraste</div><div class="v-use">Tinta sobre paper</div></div></div>
+    <div class="version-card bg-marinho"><div class="preview"><img src="logos-assets/03_lockup_completo/lockup_completo_04_destaque_576.png" alt="04 destaque"></div><div class="info"><div class="v-num">04 · Destaque</div><div class="v-name">Papelaria especial</div><div class="v-use">Mostarda sobre marinho</div></div></div>
+    <div class="version-card bg-marinho"><div class="preview"><img src="logos-assets/03_lockup_completo/lockup_completo_05_branco_576.png" alt="05 branco"></div><div class="info"><div class="v-num">05 · Branco</div><div class="v-name">Reverso</div><div class="v-use">Branco sobre marinho</div></div></div>
+  </div>
+
+  <div class="section-num">Família 04</div>
+  <h2>Lockup com tagline</h2>
+  <p class="section-note">Lockup completo + horizonte com ponto + "Para a casa que você sonhou." em italic. Versão assinatura para vitrine, cartão de visita, envelope, assinatura de e-mail da fundadora, bio do Instagram.</p>
+  <div class="versions-grid">
+    <div class="version-card bg-marinho"><div class="preview"><img src="logos-assets/04_lockup_com_tagline/lockup_com_tagline_01_mostarda_576.png" alt="01 mostarda"></div><div class="info"><div class="v-num">01 · Mostarda</div><div class="v-name">Preferencial</div><div class="v-use">Coroa + tagline sobre marinho</div></div></div>
+    <div class="version-card bg-linho"><div class="preview"><img src="logos-assets/04_lockup_com_tagline/lockup_com_tagline_02_marinho_576.png" alt="02 marinho"></div><div class="info"><div class="v-num">02 · Marinho</div><div class="v-name">Papelaria clara</div><div class="v-use">Marinho sobre linho</div></div></div>
+    <div class="version-card bg-paper"><div class="preview"><img src="logos-assets/04_lockup_com_tagline/lockup_com_tagline_03_tinta_576.png" alt="03 tinta"></div><div class="info"><div class="v-num">03 · Tinta</div><div class="v-name">Alto contraste</div><div class="v-use">Tinta sobre paper</div></div></div>
+    <div class="version-card bg-marinho"><div class="preview"><img src="logos-assets/04_lockup_com_tagline/lockup_com_tagline_04_destaque_576.png" alt="04 destaque"></div><div class="info"><div class="v-num">04 · Destaque</div><div class="v-name">Papelaria especial</div><div class="v-use">Mostarda sobre marinho</div></div></div>
+    <div class="version-card bg-marinho"><div class="preview"><img src="logos-assets/04_lockup_com_tagline/lockup_com_tagline_05_branco_576.png" alt="05 branco"></div><div class="info"><div class="v-num">05 · Branco</div><div class="v-name">Reverso</div><div class="v-use">Branco sobre marinho</div></div></div>
+  </div>
+
+  <!-- PALETA -->
+  <div class="section-num">Sistema</div>
+  <h2>Paleta canônica</h2>
+  <p class="section-note">As seis cores oficiais. Toda peça assinada pela marca usa esta paleta. Mostarda é o único saturado, racionado para signature.</p>
+  <div class="palette">
+    <div class="swatch"><div class="chip" style="background:#C89A55"></div><div class="name">Mostarda</div><div class="hex">#C89A55</div></div>
+    <div class="swatch"><div class="chip" style="background:#15233D"></div><div class="name">Marinho</div><div class="hex">#15233D</div></div>
+    <div class="swatch"><div class="chip" style="background:#1A1410"></div><div class="name">Tinta</div><div class="hex">#1A1410</div></div>
+    <div class="swatch"><div class="chip" style="background:#F5F0E8"></div><div class="name">Linho</div><div class="hex">#F5F0E8</div></div>
+    <div class="swatch"><div class="chip" style="background:#FAF7F2"></div><div class="name">Paper</div><div class="hex">#FAF7F2</div></div>
+    <div class="swatch"><div class="chip" style="background:#A55A3F"></div><div class="name">Terracota</div><div class="hex">#A55A3F</div></div>
+  </div>
+
+  <!-- REGRAS -->
+  <div class="section-num">Disciplina</div>
+  <h2>Regras mínimas de uso</h2>
+  <div class="rules">
+    <ol>
+      <li><strong>Hierarquia.</strong> O lockup é sempre vertical. Coroa em cima, wordmark embaixo. Coroa à esquerda do wordmark em arranjo horizontal não existe na marca.</li>
+      <li><strong>Tipografia.</strong> O wordmark é Fraunces italic 300 sempre. "HOME DESIGN" é JetBrains Mono 500, caps, letter-spacing 0,32em. Não trocar.</li>
+      <li><strong>Ponto-mostarda.</strong> O ponto após "Imperador" é a signature da marca. Não remover, não mover, não trocar de cor.</li>
+      <li><strong>Tagline.</strong> "Para a casa que você sonhou." só aparece no lockup com tagline (família 04), separada por horizonte com ponto. Nunca atrelada ao wordmark sozinho.</li>
+      <li><strong>Cor.</strong> Apenas as cinco versões oficiais. Nada de metalizado, ouro, prata, bronze. Não usar sobre preto puro.</li>
+      <li><strong>Tamanho mínimo.</strong> Lockup completo: 36 mm impresso, 144 px em tela. Wordmark sozinho: 24 mm, 96 px. Abaixo disso, usar só a coroa.</li>
+      <li><strong>Área de proteção.</strong> Margem mínima ao redor do lockup igual à altura da coroa. Nenhum outro elemento entra nessa margem.</li>
+    </ol>
+    <p style="margin-top:14px;font-size:13.5px;color:var(--mid);line-height:1.55;">Regras detalhadas estão na Parte IX do brand book oficial (slides 48 a 53).</p>
+  </div>
+
+  <div class="footer">
+    Imperador Home Design · Cianorte/PR · Junho 2026 · enxoval v1
+  </div>
+
+</div>
+</body>
+</html>

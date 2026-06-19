@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Promo vira convite · Imperador Home Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Libre+Caslon+Text:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --marinho:#15233D;--marinho-deep:#0E1A2E;--mostarda:#C89A55;--linho:#EDE1CA;
+  --paper:#FAF7F2;--tinta:#1A1410;--mid:#7A6F5E;--pedra:#6b5d50;--rule:#E0DAD0;
+  --terracota:#A55A3F;--good:#2A6B45;--tabaco:#8b6f47;--linho-2:#ebe2cf;--ambar:#c89a55;--ocre:#c08a4a;
+  --f-serif:'Fraunces','Georgia',serif;--f-sans:'Inter',Arial,sans-serif;--f-mono:'JetBrains Mono',monospace;--f-crown:'Libre Caslon Text','Georgia',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{background:var(--paper);color:var(--tinta);font-family:var(--f-sans);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 32px 120px;}
+
+/* HERO */
+.hero{background:var(--marinho-deep);color:var(--linho);margin:0 -32px 56px;padding:64px 60px 56px;}
+.hero .mast{font-family:var(--f-mono);font-size:10px;letter-spacing:0.26em;text-transform:uppercase;color:var(--mostarda);margin-bottom:40px;display:flex;align-items:center;gap:14px;}
+.hero .mast::after{content:"";flex:1;height:1px;background:rgba(200,154,85,0.5);}
+.hero h1{font-family:var(--f-serif);font-style:italic;font-weight:300;font-variation-settings:"opsz" 144;font-size:64px;line-height:1;letter-spacing:-0.03em;color:var(--paper);margin-bottom:20px;}
+.hero h1 .pt{color:var(--mostarda);font-style:normal;}
+.hero .lede{font-family:var(--f-serif);font-weight:400;font-size:19px;line-height:1.5;color:var(--linho);max-width:64ch;margin-bottom:24px;}
+.hero .quote{border-left:3px solid var(--mostarda);padding:10px 18px;}
+.hero .quote q{font-family:var(--f-serif);font-style:italic;font-size:18px;color:var(--paper);quotes:'"' '"';}
+.hero .quote cite{display:block;margin-top:6px;font-family:var(--f-mono);font-style:normal;font-size:9.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--mostarda);}
+
+/* PART HEADERS */
+section[data-p]{margin-bottom:64px;}
+.ph{display:flex;align-items:baseline;gap:16px;border-top:3px solid var(--mostarda);padding-top:14px;margin-bottom:12px;}
+.ph .n{font-family:var(--f-mono);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--mostarda);font-weight:600;}
+.ph .t{font-family:var(--f-serif);font-weight:400;font-size:30px;letter-spacing:-0.01em;color:var(--tinta);}
+.ph .tag{margin-left:auto;font-family:var(--f-serif);font-style:italic;font-size:14px;color:var(--mid);}
+.pintro{font-size:14.5px;color:var(--mid);max-width:80ch;margin-bottom:24px;line-height:1.6;}
+
+/* LEARNING GRID */
+.learn{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+.lcard{border:1px solid var(--rule);background:#fff;padding:18px 20px;}
+.lcard .br{font-family:var(--f-mono);font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--mostarda);margin-bottom:8px;}
+.lcard .lz{font-family:var(--f-serif);font-weight:600;font-size:17px;color:var(--marinho);line-height:1.15;margin-bottom:6px;}
+.lcard .lz em{font-style:italic;font-weight:400;color:var(--mostarda);}
+.lcard p{font-size:13px;color:var(--pedra);line-height:1.5;}
+
+/* CALLOUT */
+.callout{background:rgba(200,154,85,0.10);border-left:3px solid var(--mostarda);padding:16px 22px;margin-top:24px;font-family:var(--f-serif);font-size:15px;line-height:1.55;color:var(--tinta);max-width:80ch;}
+.callout strong{font-weight:700;}
+
+/* PRINCIPLES */
+.princ{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:8px 0 4px;}
+.pr{background:var(--marinho);color:var(--linho);padding:20px 22px;}
+.pr .k{font-family:var(--f-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--mostarda);font-weight:700;margin-bottom:10px;}
+.pr strong{display:block;font-family:var(--f-serif);font-weight:400;font-size:20px;color:var(--paper);line-height:1.1;margin-bottom:8px;}
+.pr p{font-size:12.5px;line-height:1.5;color:rgba(237,225,202,0.86);}
+
+/* PREMIUM vs LUXO */
+.pvl{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:6px;}
+.pvl .col{border:1px solid var(--rule);padding:20px 22px;background:#fff;}
+.pvl .col.luxo{background:var(--tinta);color:var(--linho);border-color:var(--tinta);}
+.pvl .big{font-family:var(--f-serif);font-weight:600;font-size:30px;line-height:1;margin-bottom:8px;}
+.pvl .col .big{color:var(--terracota);}
+.pvl .col.luxo .big{color:var(--mostarda);}
+.pvl .col p{font-size:13px;line-height:1.55;color:var(--pedra);}
+.pvl .col.luxo p{color:rgba(237,225,202,0.82);}
+.pvl .col .role{font-family:var(--f-serif);font-style:italic;font-size:14px;color:var(--tinta);margin-top:10px;}
+.pvl .col.luxo .role{color:var(--linho);}
+
+/* CÓDIGOS */
+.codigos{background:var(--marinho);color:var(--linho);padding:30px 34px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;border-top:3px solid var(--mostarda);}
+.codigos .cn{font-family:var(--f-mono);font-size:9px;letter-spacing:0.2em;color:var(--mostarda);text-transform:uppercase;margin-bottom:9px;}
+.codigos .ct{font-family:var(--f-serif);font-style:italic;font-weight:400;font-size:19px;color:var(--paper);margin-bottom:9px;line-height:1.1;}
+.codigos .cd{font-size:12px;line-height:1.55;color:rgba(237,225,202,0.85);}
+
+/* VOCAB */
+.vocab{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px;}
+.vbox{border-top:3px solid var(--good);background:#fff;padding:18px 22px;}
+.vbox.no{border-top-color:var(--terracota);}
+.vbox .k{font-family:var(--f-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;font-weight:700;margin-bottom:12px;color:var(--good);}
+.vbox.no .k{color:var(--terracota);}
+.vbox .words{display:flex;flex-wrap:wrap;gap:7px;}
+.vbox .words span{font-family:var(--f-serif);font-style:italic;font-size:14px;padding:4px 11px;background:var(--linho);color:var(--marinho);}
+.vbox.no .words span{background:rgba(165,90,63,0.10);color:var(--terracota);text-decoration:line-through;text-decoration-color:rgba(165,90,63,0.5);}
+
+/* MODEL FRAMES */
+.models{display:grid;gap:26px;}
+.mrow{display:grid;gap:22px;align-items:start;}
+.frame{position:relative;overflow:hidden;background:var(--marinho);box-shadow:0 14px 34px rgba(14,26,46,0.18);}
+.frame .bg{position:absolute;inset:0;background-size:cover;background-position:center;}
+.frame .scr{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,12,24,0.50) 0%,rgba(10,12,24,0.04) 30%,rgba(10,12,24,0.14) 64%,rgba(10,12,24,0.85) 100%);}
+.frame .inner{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;}
+.f45{aspect-ratio:4/5;}.f916{aspect-ratio:9/16;max-width:300px;}.f32{aspect-ratio:3/2;}.f11{aspect-ratio:1/1;}
+.mono{font-family:var(--f-mono);letter-spacing:0.18em;text-transform:uppercase;}
+.fr{font-family:var(--f-serif);font-style:italic;font-weight:300;}
+.pt{color:var(--mostarda);}
+.crownseal{display:flex;align-items:center;gap:9px;}
+.crownseal .cr{font-family:var(--f-crown);font-weight:700;color:var(--mostarda);line-height:1;}
+.seal-med{width:60px;height:60px;border-radius:50%;border:1px solid var(--mostarda);background:rgba(14,26,46,0.55);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;flex:none;}
+.seal-med .cr{font-family:var(--f-crown);font-weight:700;color:var(--mostarda);font-size:18px;line-height:0.8;}
+.seal-med .ed{font-family:var(--f-mono);font-size:6px;letter-spacing:0.12em;text-transform:uppercase;color:var(--mostarda);margin-top:4px;}
+.seal-med .mo{font-family:var(--f-serif);font-style:italic;font-size:11px;color:var(--linho);line-height:1;margin-top:1px;}
+.seal-med.sm{width:46px;height:46px;}
+.seal-med.sm .cr{font-size:14px;}.seal-med.sm .ed{font-size:5px;margin-top:2px;}.seal-med.sm .mo{font-size:8px;}
+
+.offer-tag{display:inline-block;background:var(--mostarda);color:var(--marinho);font-family:var(--f-mono);letter-spacing:0.12em;font-weight:600;padding:4px 10px;}
+.mcap{font-family:var(--f-serif);font-style:italic;font-size:12px;color:var(--pedra);line-height:1.5;margin-top:9px;}
+.mlabel{font-family:var(--f-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--marinho);margin-bottom:8px;}
+
+/* ANTES/DEPOIS */
+.ab{display:grid;grid-template-columns:260px 1fr;gap:30px;align-items:start;margin-bottom:8px;}
+.foot{margin-top:70px;border-top:3px solid var(--mostarda);padding-top:22px;}
+.foot p{font-family:var(--f-serif);font-size:16px;line-height:1.55;color:var(--tinta);max-width:70ch;margin-bottom:12px;}
+.foot .sig{font-family:var(--f-mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--mid);margin-top:20px;}
+@media(max-width:820px){.learn,.princ,.pvl,.codigos,.vocab,.ab{grid-template-columns:1fr;}}
+
+/* ===== REFERÊNCIAS (restaurado) ===== */
+.subhead {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--tabaco);
+  margin: 14px 0 12px;
+  border-bottom: 1px solid var(--linho-2);
+  padding-bottom: 6px;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  gap: 16px;
+}
+.card {
+  border: 1px solid var(--linho-2);
+  background: var(--paper);
+  display: flex;
+  flex-direction: column;
+}
+.card-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--tabaco);
+  padding: 12px 16px 8px;
+  border-bottom: 1px solid var(--linho-2);
+  line-height: 1.4;
+}
+.card-body {
+  padding: 12px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.card-name {
+  font-family: 'Libre Caslon Text', serif;
+  font-weight: 700;
+  font-size: 15.5px;
+  color: var(--tinta);
+  line-height: 1.15;
+  margin-bottom: 6px;
+}
+.card-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8.5px;
+  letter-spacing: 0.16em;
+  color: var(--pedra);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.card-sub {
+  font-size: 12px;
+  color: var(--tinta);
+  line-height: 1.55;
+  margin-bottom: 10px;
+  flex: 1;
+}
+.card-rule {
+  font-family: 'Libre Caslon Text', serif;
+  font-style: italic;
+  font-size: 11.5px;
+  color: var(--tabaco);
+  line-height: 1.5;
+  padding-top: 8px;
+  border-top: 1px solid var(--linho-2);
+}
+
+/* IMAGE COM OVERLAY PROMOCIONAL */
+.img-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #1a140e;
+}
+.img-wrap img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.img-wrap.h-220 { height: 220px; }
+.img-wrap.h-280 { height: 280px; }
+.img-wrap.h-340 { height: 340px; }
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px 18px;
+  background: linear-gradient(180deg, rgba(10,8,6,0.55) 0%, rgba(10,8,6,0.05) 28%, rgba(10,8,6,0.10) 60%, rgba(10,8,6,0.78) 100%);
+  pointer-events: none;
+}
+.overlay .ol-top {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+}
+.overlay .ol-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.overlay .ol-event {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--mostarda);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+}
+.overlay .ol-head {
+  font-family: 'Libre Caslon Text', serif;
+  font-weight: 700;
+  color: #fff;
+  font-size: 19px;
+  line-height: 1.08;
+  letter-spacing: -0.005em;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.55);
+  max-width: 22ch;
+}
+.overlay .ol-head em { font-style: italic; color: var(--mostarda); }
+.overlay .ol-mini {
+  font-family: 'Inter', sans-serif;
+  font-size: 10.5px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.78);
+  letter-spacing: 0.01em;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+}
+
+/* OVERLAY VARIANTS por marca */
+.overlay-aramis .ol-head { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 28px; letter-spacing: -0.01em; line-height: 1.0; text-transform: uppercase; }
+.overlay-aramis .ol-event { color: #d4b27a; }
+.overlay-reserva .ol-head { font-family: 'Libre Caslon Text', serif; font-style: italic; }
+.overlay-animale .ol-head { font-family: 'Fraunces', serif; font-weight: 300; font-style: italic; font-size: 22px; text-transform: lowercase; letter-spacing: 0; }
+.overlay-etel .ol-head { font-family: 'Libre Caslon Text', serif; font-weight: 700; }
+.overlay-rh .ol-head { font-family: 'Inter', sans-serif; font-weight: 300; font-size: 24px; letter-spacing: 0.06em; text-transform: uppercase; }
+.overlay-cb2 .ol-head { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 0.04em; text-transform: uppercase; }
+.overlay-devol .ol-head { font-family: 'Libre Caslon Text', serif; font-weight: 700; font-style: italic; }
+.overlay-imp .ol-head { font-family: 'Fraunces', serif; font-weight: 300; font-style: italic; font-size: 26px; }
+
+/* DISTINÇÃO */
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="mast">Imperador Home Design <span>·</span> Anexo do sistema <span>·</span> Família 06</div>
+  <h1>Promo vira convite<span class="pt">.</span></h1>
+  <p class="lede">Como a casa comunica uma condição comercial sem parecer varejo. Premium pode promover. O que muda é o vocabulário: a oferta entra como convite, nunca como grito. Este anexo detalha a família Promo do sistema de overlays.</p>
+  <div class="quote"><q>Elevar sem afastar.</q><cite>Andreia · brief de marca</cite></div>
+</header>
+
+<div class="wrap">
+
+  <!-- PARTE 1 · REFERÊNCIAS -->
+  <section data-p="1">
+    <div class="ph"><span class="n">Parte 1</span><span class="t">O que aprendemos com marcas premium</span><span class="tag">fundamento, não direção</span></div>
+    <p class="pintro">7 marcas premium reais, todas com presença ativa em junho de 2026. 4 brasileiras (a meta de Imperador Home Design é estar com elas) e 3 internacionais (a régua de excelência). Em cada imagem, a manchete real da peça aparece em overlay no estilo tipográfico da própria marca. O que cada uma faz com a oferta vira leitura imediata.</p>
+
+    <!-- ARAMIS · CANÔNICA -->
+    <div class="subhead">A · Canônica brasileira · Aramis</div>
+    <div class="cards" style="grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 36px;">
+
+      <div class="card">
+        <div class="card-label">Ref · 01 · BR · CANÔNICA</div>
+        <div class="img-wrap h-340">
+          <img src="imagens/ref_premium/ref_aramis_best_friday.jpg" alt="Aramis Best Friday">
+          <div class="overlay overlay-aramis">
+            <div class="ol-top">Aramis · Pré-Black Friday 2024</div>
+            <div class="ol-bottom">
+              <div class="ol-event">Edição limitada · 30% OFF</div>
+              <div class="ol-head">Best Friday</div>
+              <div class="ol-mini">A sexta editorial que ensinou o varejo brasileiro a chamar Black de Best.</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">"Best Friday" · a peça de referência</div>
+          <div class="card-meta">aramis.com.br · @aramismenswear · 1.6M</div>
+          <div class="card-sub">Aramis trocou Black por Best e fez disso campanha. Renomeou o momento, inverteu a hierarquia (provocação em cima, percentual em corpo médio), e usou fotografia editorial de moda masculina no lugar de banner de promo. O resultado financeiro veio sem o desgaste de marca que Black Friday normalmente provoca em premium.</div>
+          <div class="card-rule">Renomear o momento é o primeiro gesto premium.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Decodificação · 4 gestos premium</div>
+        <div class="card-body" style="padding: 28px 26px;">
+          <p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.20em;color:var(--tabaco);text-transform:uppercase;margin-bottom:18px;">Por que funciona</p>
+
+          <div style="margin-bottom:18px;">
+            <p style="font-family:'Libre Caslon Text',serif;font-weight:700;font-size:14px;color:var(--tinta);margin-bottom:4px;">01 · Renomeou o momento.</p>
+            <p style="font-size:12.5px;color:var(--pedra);line-height:1.55;">Best, não Black. A marca cria o vocabulário, não pega emprestado do varejo.</p>
+          </div>
+
+          <div style="margin-bottom:18px;">
+            <p style="font-family:'Libre Caslon Text',serif;font-weight:700;font-size:14px;color:var(--tinta);margin-bottom:4px;">02 · Inverteu a hierarquia.</p>
+            <p style="font-size:12.5px;color:var(--pedra);line-height:1.55;">Manchete em cima, percentual embaixo. O nome do evento manda, o número acompanha.</p>
+          </div>
+
+          <div style="margin-bottom:18px;">
+            <p style="font-family:'Libre Caslon Text',serif;font-weight:700;font-size:14px;color:var(--tinta);margin-bottom:4px;">03 · Hackeou o Google.</p>
+            <p style="font-size:12.5px;color:var(--pedra);line-height:1.55;">Quem buscou "Black Friday Aramis" caiu na Best. O canal massificado entrega marca, não desconto.</p>
+          </div>
+
+          <div>
+            <p style="font-family:'Libre Caslon Text',serif;font-weight:700;font-size:14px;color:var(--tinta);margin-bottom:4px;">04 · Resultado financeiro sem virar varejo.</p>
+            <p style="font-size:12.5px;color:var(--pedra);line-height:1.55;">Venda casada com posicionamento. O cliente comprou em oferta sem sentir que comprou no saldão.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6 REFERÊNCIAS · UMA POR LINHA, MESMO TRATAMENTO DA ARAMIS -->
+    <div class="subhead">B · Outras seis referências · 3 Brasil, 3 exterior</div>
+
+    <!-- RESERVA -->
+    <div class="cards" style="grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 32px;">
+      <div class="card">
+        <div class="card-label">Ref · 02 · BR</div>
+        <div class="img-wrap h-340">
+          <img src="imagens/ref_premium/ref_reserva_titular.jpg" alt="Reserva Titular">
+          <div class="overlay overlay-reserva">
+            <div class="ol-top">Reserva · Programa de fidelidade</div>
+            <div class="ol-bottom">
+              <div class="ol-event">Acesso antecipado · Titulares</div>
+              <div class="ol-head">Dia de Reserva virar Titular</div>
+              <div class="ol-mini">A liquidação foi rebatizada como clube de status. Quem é Titular entra primeiro.</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">"Dia de Reserva virar Titular" · programa, não promo</div>
+          <div class="card-meta">moda premium BR · @reserva · 1.4M</div>
+          <div class="card-sub">A Reserva pegou a liquidação de fim de coleção e transformou em programa de fidelidade permanente. Cliente Titular tem 48h de acesso antes do público geral. A oferta deixou de ser evento e virou benefício de pertencimento. O cliente paga para continuar Titular, e a marca controla o calendário promocional o ano inteiro.</div>
+          <div class="card-rule">Nunca diz saldo, queima ou liquidação.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Decodificação · 4 gestos premium</div>
+        <div class="card-body" style="padding: 28px 26px;">
+          <p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.20em;color:var(--tabaco);text-transform:uppercase;margin-bottom:18px;">Por que funciona</p>
+
+          <div style="margin-bottom:18px;">
+            <p style="font-family:'Libre Caslon Text',serif;font-weight:700;font-size:14px;color:var(--tinta);margin-bottom:4px;">01 · Renomeou o cliente fiel.</p>
+            <p style="font-size:12.5px;color:var(--pedra);line-height:1.55;">"Titular", não cliente, não membro. A palavra empresta vocabulário de cartão de crédito premium, sem custar nada.</p>
+          </div>
+
+          <div style="margin-bottom:18px;">
+            <p style="font-family:'Libre Caslon Text',serif;font-weight:700;font-size:14px;color:var(--tinta);margin-bottom:4px;">02 · Promo virou acesso.</p>
+            <p style="font-size:12.5px;color:var(--pedra);line-height:1.55;">48h de pré-venda exclusiva no lugar do desconto generalizado. A oferta vira privilégio horário, não corte de preço.</p>
+          </div>
+
+          <div style="margin-bottom:18px;">
+            <p style="font-family:'Libre Caslon Text',serif;font-weight:700;font-size:14px;color:var(--tinta);margin-bottom:4px;">03 · Programa permanente.</p>
+            <p style="font-size:12.5px;color:var(--pedra);line-height:1.55;">Funciona o ano inteiro, não só em Black Friday. A marca controla o calendário em vez de reagir a ele.</p>
+          </div>
+
+          <div>
+            <p style="font-family:'Libre Caslon Text',serif;font-weight:700;font-size:14px;color:var(--tinta);margin-bottom:4px;">04 · Status na manchete, percentual no rodapé.</p>
+            <p style="font-size:12.5px;color:var(--pedra);line-height:1.55;">"Virar Titular" carrega a peça. O desconto fica no SAC, na letra miúda, na hora do checkout.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ANIMALE -->
+    <div class="cards" style="grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 32px;">
+      <div class="card">
+        <div class="card-label">Ref · 03 · BR</div>
+        <div class="img-wrap h-340">
+          <img src="imagens/ref_premium/ref_animale_alto_inverno.jpg" alt="Animale Alto Inverno 26">
+          <div class="overlay overlay-animale">
+            <div class="ol-top">Animale · Lançamento de coleção</div>
+            <div class="ol-bottom">
+              <div class="ol-event">Edição Alto Inverno 26</div>
+              <div class="ol-head">os códigos da estação</div>
+              <div class="ol-mini">A coleção chega como editorial de revista. A peça vira código, nunca vitrine.</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">"Alto Inverno 26 · os códigos da estação"</div>
+          <div class="card-meta">moda premium BR · @animalebrasil · 1.2M</div>
+          <div class="card-sub">A Animale evita inteiramente o vocabulário promocional. Cada coleção entra como lançamento editorial assinado, com número de página, glossário de termos, fotografia de detalhe técnico. A oferta de preço (quando existe) aparece só dentro do Programa Animale, em e-mail privado. O Instagram nunca anuncia desconto.</div>
+          <div class="card-rule">A coleção é o lançamento. O preço é detalhe.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Decodificação · 4 gestos premium</div>
+        <div class="card-body" style="padding: 28px 26px;">
+          <p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.20em;color:var(--tabaco);text-transform:uppercase;margin-bottom:18px;">Por que funciona</p>
+
+          <div style="margin-bottom:18px;">
+            <p style="font-family:'Libre Caslon Text',serif;font-weight:700;font-size:14px;color:var(--tinta);margin-bottom:4px;">01 · Coleção como lançamento, não como liquidação.</p>
+            <p style="font-size:12.5px;color:var(--pedra);line-height:1.55;">Vocabulário de editorial de moda substitui vocabulário de varejo. A peça nasce nova, não está saindo de linha.</p>
+          </div>
+
+          <div style="margin-bottom:18px;">
+            <p style="font-family:'Libre Caslon Text',serif;font-weight:700;font-size:14px;color:var(--tinta);margin-bottom:4px;">02 · Numeração da estação.</p>
+            <p style="font-size:12.5px;color:var(--pedra);line-height:1.55;">"Alto Inverno 26" cria sequência editorial própria. A marca tem calendário, não pega emprestado do mercado.</p>
+          </div>
+
+          <div style="margin-bottom:18px;">
+            <p style="font-family:'Libre Caslon Text',serif;font-weight:700;font-size:14px;color:var(--tinta);margin-bottom:4px;">03 · Tipografia editorial fina.</p>
+            <p style="font-size:12.5px;color:var(--pedra);line-height:1.55;">Fraunces leve, white-space generoso, texto magro. Visual de revista de moda, não de banner de oferta.</p>
+          </div>
+
+          <div>
+            <p style="font-family:'Libre Caslon Text',serif;font-weight:700;font-size:14px;color:var(--tinta);margin-bottom:4px;">04 · Detalhe técnico vira poesia.</p>
+            <p style="font-size:12.5px;color:var(--pedra);line-height:1.55;">"Os códigos da estação" não vende nada. Descreve. O cliente premium quer ler, não ser convencido.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ETEL -->
+    <div class="cards" style="grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 32px;">
+      <div class="card">
+        <div class="card-label">Ref · 04 · BR</div>
+        <div class="img-wrap h-340">
+          <img src="imagens/ref_premium/ref_etel_casacor.jpg" alt="Etel CASACOR 2026">
+          <div class="overlay overlay-etel">
+            <div class="ol-top">Etel · Presença em mostra</div>
+            <div class="ol-bottom">
+              <div class="ol-event">CASACOR 2026 · São Paulo</div>
+              <div class="ol-head">espaço Nildo José</div>
+              <div class="ol-mini">O móvel vira prova de obra, vendido pela curadoria do arquiteto.</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">CASACOR · presença em vez de anúncio</div>
+          <div class="card-meta">mobiliário premium BR · @etel.design · 139K</div>
+          <div class="card-sub">A Etel não promove a peça. Promove a presença da peça. Cada coleção é colocada dentro do projeto de um arquiteto premiado em mostra de prestígio (CASACOR, Casa Vogue Experience, MADE). O móvel aparece em ambiente cenografado por terceiro. A venda acontece porque o cliente viu o sofá Etel na sala desenhada por Nildo José, não porque viu um anúncio Etel.</div>
+          <div class="card-rule">A peça é vendida pela obra do outro.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Decodificação · 4 gestos premium</div>
+        <div class="card-body" style="padding: 28px 26px;">
+          <p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.20em;color:var(--tabaco);text-transform:uppercase;margin-bottom:18px;">Por que funciona</p>
+
+          <div style="margin-bottom:18px;">
+            <p style="font-family:'Libre Caslon Text',serif;font-weight:700;font-size:14px;color:var(--tinta);margin-bottom:4px;">01 · Presença, não anúncio.</p>
+            <p style="font-size:12.5px;color:var(--pedra);line-height:1.55;">A peça aparece em obra de terceiro. A marca não fala dela. Quem fala é o evento, o arquiteto, a imprensa especializada.</p>
+          </div>
+
+          <div style="margin-bottom:18px;">
+            <p style="font-family:'Libre Caslon Text',serif;font-weight:700;font-size:14px;color:var(--tinta);margin-bottom:4px;">02 · Curadoria como prova de qualidade.</p>
+            <p style="font-size:12.5px;color:var(--pedra);line-height:1.55;">Nildo José foi premiado. Se ele escolheu Etel para o ambiente dele, a marca está validada sem precisar dizer nada.</p>
+          </div>
+
+          <div style="margin-bottom:18px;">
+            <p style="font-family:'Libre Caslon Text',serif;font-weight:700;font-size:14px;color:var(--tinta);margin-bottom:4px;">03 · Calendário cultural, não comercial.</p>
+            <p style="font-size:12.5px;color:var(--pedra);line-height:1.55;">CASACOR é evento cultural com agenda própria. A Etel sai dele com cobertura editorial, não com sale de 30%.</p>
+          </div>
+
+          <div>
+            <p style="font-family:'Libre Caslon Text',serif;font-weight:700;font-size:14px;color:var(--tinta);margin-bottom:4px;">04 · Foto de ambiente real.</p>
+            <p style="font-size:12.5px;color:var(--pedra);line-height:1.55;">Luz natural, livros na estante, jarra de flores. Não tem retoque de estúdio. A imagem vende porque parece a casa do cliente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESTORATION HARDWARE -->
+    <div class="cards" style="grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 32px;">
+      <div class="card">
+        <div class="card-label">Ref · 05 · EUA</div>
+        <div class="img-wrap h-340">
+          <img src="imagens/ref_premium/ref_rh_outdoor_summer.jpg" alt="RH Early Summer Sale">
+          <div class="overlay overlay-rh">
+            <div class="ol-top">Restoration Hardware · The Early Summer Sale</div>
+            <div class="ol-bottom">
+              <div class="ol-event">Edição anual · 16 de fevereiro</div>
+              <div class="ol-head">OUTDOOR · 60% OFF</div>
+              <div class="ol-mini">A cena mediterrânea de pôr-do-sol carrega o peso da comunicação. O número entra como detalhe técnico.</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">"OUTDOOR · 60% OFF" sem soar saldão</div>
+          <div class="card-meta">móveis premium · rh.com · marca-evento</div>
+          <div class="card-sub">RH é a prova de que dá para declarar 60% de desconto em premium sem perder a marca. O segredo está na embalagem. A homepage vira capa de Vogue Living. Cena de pôr-do-sol no Mediterrâneo, sofás de teca, palmeiras. A palavra OUTDOOR em corpo gigante. O percentual existe, mas vem em peso fino, integrado ao layout. A peça promovida vira destino de viagem, não vitrine de saldão.</div>
+          <div class="card-rule">Pode dizer 60%. Só não pode parecer 60%.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Decodificação · 4 gestos premium</div>
+        <div class="card-body" style="padding: 28px 26px;">
+          <p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.20em;color:var(--tabaco);text-transform:uppercase;margin-bottom:18px;">Por que funciona</p>
+
+          <div style="margin-bottom:18px;">
+            <p style="font-family:'Libre Caslon Text',serif;font-weight:700;font-size:14px;color:var(--tinta);margin-bottom:4px;">01 · Desconto declarado sem pudor.</p>
+            <p style="font-size:12.5px;color:var(--pedra);line-height:1.55;">A marca dá 60% e fala 60%. Premium não é luxo, pode promover. A questão é como a frase está escrita, não se a frase existe.</p>
+          </div>
+
+          <div style="margin-bottom:18px;">
+            <p style="font-family:'Libre Caslon Text',serif;font-weight:700;font-size:14px;color:var(--tinta);margin-bottom:4px;">02 · Fotografia mediterrânea como capa.</p>
+            <p style="font-size:12.5px;color:var(--pedra);line-height:1.55;">Sunset, sofás de teca, palmeiras. A imagem é editorial de viagem. A peça aparece como troféu de destino.</p>
+          </div>
+
+          <div style="margin-bottom:18px;">
+            <p style="font-family:'Libre Caslon Text',serif;font-weight:700;font-size:14px;color:var(--tinta);margin-bottom:4px;">03 · Escala tipográfica de revista.</p>
+            <p style="font-size:12.5px;color:var(--pedra);line-height:1.55;">OUTDOOR ocupa um terço da tela em fonte fina. SAVE UP TO 60% entra em corpo médio. O peso visual está na palavra, não no número.</p>
+          </div>
+
+          <div>
+            <p style="font-family:'Libre Caslon Text',serif;font-weight:700;font-size:14px;color:var(--tinta);margin-bottom:4px;">04 · Cenário aspiracional sobre produto isolado.</p>
+            <p style="font-size:12.5px;color:var(--pedra);line-height:1.55;">A peça não está sobre fundo branco. Está dentro de cena habitada. O cliente compra a ambientação, o sofá vem junto.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CB2 -->
+    <div class="cards" style="grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 32px;">
+      <div class="card">
+        <div class="card-label">Ref · 06 · EUA</div>
+        <div class="img-wrap h-340">
+          <img src="imagens/ref_premium/ref_cb2_townhouse.jpg" alt="CB2 Uniform of a Townhouse">
+          <div class="overlay overlay-cb2">
+            <div class="ol-top">CB2 · Colab com Todd Snyder</div>
+            <div class="ol-bottom">
+              <div class="ol-event">Lançamento de coleção</div>
+              <div class="ol-head">The Uniform of a Townhouse</div>
+              <div class="ol-mini">Estilista de moda assina a coleção. Sofá é figurante da fotografia editorial.</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Colab vira coleção, sale vira página separada</div>
+          <div class="card-meta">móveis premium EUA · @cb2 · 1.1M</div>
+          <div class="card-sub">A CB2 lança colaboração com Todd Snyder, estilista de moda masculina nova-iorquino. A peça nova entra como vestuário da casa. O título poético ("Uniform of a Townhouse") descreve o estilo de vida. A foto é editorial de moda, sofá aparece como figurante. Sale com desconto direto existe, mas em página separada chamada "Last Look", longe da home, nunca no feed principal.</div>
+          <div class="card-rule">A foto da peça importa mais que o preço.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Decodificação · 4 gestos premium</div>
+        <div class="card-body" style="padding: 28px 26px;">
+          <p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.20em;color:var(--tabaco);text-transform:uppercase;margin-bottom:18px;">Por que funciona</p>
+
+          <div style="margin-bottom:18px;">
+            <p style="font-family:'Libre Caslon Text',serif;font-weight:700;font-size:14px;color:var(--tinta);margin-bottom:4px;">01 · Colab como veículo.</p>
+            <p style="font-size:12.5px;color:var(--pedra);line-height:1.55;">Estilista de moda assina a coleção. A oferta vira lançamento autoral, com nome e biografia. Não é a marca vendendo, é o estilista escolhendo.</p>
+          </div>
+
+          <div style="margin-bottom:18px;">
+            <p style="font-family:'Libre Caslon Text',serif;font-weight:700;font-size:14px;color:var(--tinta);margin-bottom:4px;">02 · Fotografia editorial de moda.</p>
+            <p style="font-size:12.5px;color:var(--pedra);line-height:1.55;">Homem sentado, terno e sapato, look book de revista masculina. O móvel é elemento secundário do retrato. Tom aspiracional carregado pela pose, não pela peça.</p>
+          </div>
+
+          <div style="margin-bottom:18px;">
+            <p style="font-family:'Libre Caslon Text',serif;font-weight:700;font-size:14px;color:var(--tinta);margin-bottom:4px;">03 · Título poético sobre o uso.</p>
+            <p style="font-size:12.5px;color:var(--pedra);line-height:1.55;">"Uniform of a Townhouse" descreve estilo de vida. A frase vende contexto, não objeto. Cliente compra a vida que o título promete.</p>
+          </div>
+
+          <div>
+            <p style="font-family:'Libre Caslon Text',serif;font-weight:700;font-size:14px;color:var(--tinta);margin-bottom:4px;">04 · Promo direta isolada em URL própria.</p>
+            <p style="font-size:12.5px;color:var(--pedra);line-height:1.55;">"Last Look" tem endereço separado. Quem quer desconto chega lá por busca direta. Home da marca nunca exibe o saldão.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- deVOL KITCHENS -->
+    <div class="cards" style="grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 32px;">
+      <div class="card">
+        <div class="card-label">Ref · 07 · UK</div>
+        <div class="img-wrap h-340">
+          <img src="imagens/ref_premium/ref_devol_kitchens.jpg" alt="deVOL Kitchens Sample Sale">
+          <div class="overlay overlay-devol">
+            <div class="ol-top">deVOL Kitchens · Evento anual fixo</div>
+            <div class="ol-bottom">
+              <div class="ol-event">Showroom Sample Sale · Março</div>
+              <div class="ol-head">somente com agendamento</div>
+              <div class="ol-mini">Uma única janela por ano. Resto do tempo, silêncio total sobre oferta.</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Uma promo por ano, com calendário fixo</div>
+          <div class="card-meta">cozinhas sob medida UK · @devolkitchens · 750K</div>
+          <div class="card-sub">A deVOL Kitchens faz uma única promo no ano: o Showroom Sample Sale de março. Acontece no showroom de Loughborough, exige agendamento prévio, fica aberto três dias. Cliente entra como visita, não como comprador apressado. O resto do ano, nenhuma menção a oferta em redes ou e-mail. A escassez do momento promocional virou patrimônio da marca, e a base de cliente fiel aguarda março como evento próprio.</div>
+          <div class="card-rule">Uma vez ao ano com nome próprio.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Decodificação · 4 gestos premium</div>
+        <div class="card-body" style="padding: 28px 26px;">
+          <p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.20em;color:var(--tabaco);text-transform:uppercase;margin-bottom:18px;">Por que funciona</p>
+
+          <div style="margin-bottom:18px;">
+            <p style="font-family:'Libre Caslon Text',serif;font-weight:700;font-size:14px;color:var(--tinta);margin-bottom:4px;">01 · Calendário único e fixo.</p>
+            <p style="font-size:12.5px;color:var(--pedra);line-height:1.55;">Março, todo ano, sem variação. Cliente sabe quando vem. Marca controla a expectativa, não corre atrás de venda.</p>
+          </div>
+
+          <div style="margin-bottom:18px;">
+            <p style="font-family:'Libre Caslon Text',serif;font-weight:700;font-size:14px;color:var(--tinta);margin-bottom:4px;">02 · Agendamento obrigatório.</p>
+            <p style="font-size:12.5px;color:var(--pedra);line-height:1.55;">A oferta exige visita marcada. Vira experiência presencial, não compra rápida online. Atrito desejável que filtra o cliente.</p>
+          </div>
+
+          <div style="margin-bottom:18px;">
+            <p style="font-family:'Libre Caslon Text',serif;font-weight:700;font-size:14px;color:var(--tinta);margin-bottom:4px;">03 · Showroom como cenário.</p>
+            <p style="font-size:12.5px;color:var(--pedra);line-height:1.55;">A peça vendida no ambiente real da loja. Cliente vê em uso, em escala, em luz natural. A imagem que circula é fotografia da experiência, não do produto isolado.</p>
+          </div>
+
+          <div>
+            <p style="font-family:'Libre Caslon Text',serif;font-weight:700;font-size:14px;color:var(--tinta);margin-bottom:4px;">04 · Silêncio total no resto do ano.</p>
+            <p style="font-size:12.5px;color:var(--pedra);line-height:1.55;">11 meses sem nenhuma menção a oferta. A escassez do momento promocional vira patrimônio da marca, não vulnerabilidade comercial.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>O que estas 7 referências ensinam.</strong> Aramis renomeia o momento. Reserva transforma promo em programa de fidelidade. Animale lança coleção em vez de oferta. Etel vende pela presença em mostra. Restoration Hardware declara 60% mas em cena de viagem. CB2 promove via colab de moda. deVOL Kitchens faz uma vez por ano com calendário fixo. <strong>Sete caminhos diferentes, todos premium.</strong> Imperador Home Design pode escolher um, dois ou três a aplicar.
+    </div>
+  </section>
+
+  <!-- PARTE 2 -->
+  <section data-p="2">
+    <div class="ph"><span class="n">Parte 2</span><span class="t">O que a Imperador faz diferente</span><span class="tag">premium honesto</span></div>
+    <p class="pintro">A Imperador Home Design é premium, não luxo. Premium pode promover. Ela compete com Casa Bonita, Inna e Realize, não com Hermès. Por isso a oferta é permitida. Só precisa soar como convite da casa, nunca como saldão.</p>
+
+    <div class="pvl">
+      <div class="col">
+        <p class="big">Premium</p>
+        <p>Qualidade e experiência como produto, preço como investimento. A oferta existe e ganha nome próprio: edição, abertura, convite.</p>
+        <p class="role">Pode promover. Aqui mora a Imperador Home Design.</p>
+      </div>
+      <div class="col luxo">
+        <p class="big">Luxo</p>
+        <p>Escassez como produto, preço como afirmação. A comunicação pública trata de objeto e ofício, nunca de oferta. Promo só por convite privado.</p>
+        <p class="role">Não promove em público. Não é o terreno da casa.</p>
+      </div>
+    </div>
+
+    <p class="pintro" style="margin-top:24px;">Os três princípios que governam toda peça promocional da casa. Eles vêm direto do sistema de overlays.</p>
+    <div class="princ">
+      <div class="pr"><div class="k">Princípio 1</div><strong>Foto manda.</strong><p>A imagem do ambiente fica inteira. O overlay nunca corta a foto, só pousa por cima com scrim para leitura.</p></div>
+      <div class="pr"><div class="k">Princípio 2</div><strong>Coroa chancela.</strong><p>Promo é a única família social com coroa. O selo marca a ocasião comercial, e some fora dela.</p></div>
+      <div class="pr"><div class="k">Princípio 3</div><strong>Oferta clara, sem grito.</strong><p>O benefício aparece, em etiqueta mostarda, com vocabulário de convite. Existe, mas não domina a peça.</p></div>
+    </div>
+  </section>
+
+  <!-- PARTE 3 -->
+  <section data-p="3">
+    <div class="ph"><span class="n">Parte 3</span><span class="t">Sistema aplicado</span><span class="tag">os quatro códigos</span></div>
+    <p class="pintro">As sete referências cabem em quatro códigos. Eles são a aplicação comercial dos princípios e da tríade de símbolos do sistema (família Promo, X.5.f no brand book). Qualquer peça promocional respeita os quatro. Se faltar um, volta para a mesa.</p>
+
+    <div class="codigos">
+      <div><p class="cn">Código 1</p><p class="ct">Disciplina tipográfica</p><p class="cd">Fraunces, Inter e mono, sempre. Nada de fonte de promo. A peça usa o mesmo sistema do site e do brand book.</p></div>
+      <div><p class="cn">Código 2</p><p class="ct">Nome próprio sobre adjetivo</p><p class="cd">A promo tem nome de batismo: "A casa renova o salão", "Edição de janeiro". Nunca "saldão" ou "imperdível".</p></div>
+      <div><p class="cn">Código 3</p><p class="ct">Foto comanda, número acompanha</p><p class="cd">Fotografia de ambiente real, inteira. O percentual entra em etiqueta mostarda discreta, nunca em vermelho de queima.</p></div>
+      <div><p class="cn">Código 4</p><p class="ct">Calendário fixo</p><p class="cd">A promo acontece em data nomeada: janeiro, abril, outubro. Fora das três janelas, silêncio.</p></div>
+    </div>
+
+    <div class="vocab">
+      <div class="vbox"><div class="k">Preferir · vocabulário de convite</div><div class="words"><span>edição</span><span>mostruário</span><span>convite</span><span>condição de janeiro</span><span>peças selecionadas</span><span>prévia para clientes</span><span>a casa renova o salão</span></div></div>
+      <div class="vbox no"><div class="k">Evitar · vocabulário de varejo</div><div class="words"><span>liquidação</span><span>queima</span><span>imperdível</span><span>corra</span><span>última chance</span><span>black</span><span>saldão</span></div></div>
+    </div>
+
+    <div class="callout"><strong>A regra única.</strong> A headline é convite. A oferta é condição, nunca a headline isolada. "A casa renova o salão." carrega a peça; "peças com até 40%" entra como etiqueta, embaixo, em letra contida.</div>
+  </section>
+  <!-- PARTE 4 -->
+  <section data-p="4">
+    <div class="ph"><span class="n">Parte 4</span><span class="t">Modelos de campanha</span><span class="tag">Edição Janeiro 2027</span></div>
+    <p class="pintro">A campanha canônica aplicada. Mesma manchete, mesmo selo da coroa, mesma etiqueta de oferta, em quatro superfícies. A headline é o convite; a oferta é a condição. Bate com o slide X.5.f do brand book.</p>
+    <div class="callout" style="margin-bottom:30px;"><strong>Campanha canônica.</strong> Edição de janeiro<span class="pt">.</span> A casa renova o salão<span class="pt">.</span> Peças com até 40%, cortesia da casa.</div>
+
+    <div class="mlabel">Antes e depois</div>
+    <div class="ab">
+      <div>
+        <div class="mlabel" style="color:var(--terracota);">Antes · recusado</div>
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;border:1px solid var(--terracota);">
+          <img src="imagens/ref/ref_diag_promo.jpg" alt="Post recusado" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <div style="position:absolute;top:10px;right:10px;background:rgba(165,90,63,0.95);color:#fff;font-family:var(--f-mono);font-size:8px;letter-spacing:0.16em;padding:5px 9px;text-transform:uppercase;">Não usar</div>
+        </div>
+        <p class="mcap">Linguagem de pressão, cor de queima, percentual gritado. Quebra os quatro códigos.</p>
+      </div>
+      <div>
+        <div class="mlabel" style="color:var(--good);">Depois · canônico · Feed 4:5 (formato-mãe)</div>
+        <div class="frame f45" style="max-width:380px;">
+          <div class="bg" style="background-image:url('imagens/imperador_salao_showroom.jpg');"></div>
+          <div class="scr"></div>
+          <div class="inner" style="padding:24px 26px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+              <span class="mono" style="font-size:9px;color:var(--mostarda);">Renovação &middot; jan 2027</span>
+              <div class="seal-med"><span class="cr">&#9819;</span><span class="ed">Edição</span><span class="mo">janeiro</span></div>
+            </div>
+            <div>
+              <p class="fr" style="font-size:42px;line-height:0.98;color:#fff;">A casa renova o salão<span class="pt">.</span></p>
+              <p style="font-family:var(--f-serif);font-style:italic;font-size:14px;color:rgba(255,255,255,0.9);margin:11px 0 13px;">Curadoria de janeiro, por Andreia.</p>
+              <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;">
+                <span class="mono" style="font-size:8.5px;color:rgba(255,255,255,0.72);">15 a 31 &middot; agendamento</span>
+                <span class="offer-tag" style="font-size:9px;">peças com até 40%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="mcap">Foto inteira, manchete Fraunces, selo da coroa no alto, oferta em etiqueta mostarda. Cumpre os quatro códigos.</p>
+      </div>
+    </div>
+
+    <div class="mlabel" style="margin-top:34px;">Story 9:16 e fachada 3:2</div>
+    <div class="mrow" style="grid-template-columns:300px 1fr;">
+      <div>
+        <div class="frame f916">
+          <div class="bg" style="background-image:url('imagens/imperador_salao_showroom.jpg');"></div>
+          <div class="scr"></div>
+          <div class="inner" style="padding:22px 20px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+              <span class="mono" style="font-size:7.5px;color:var(--mostarda);">Renovação &middot; jan 2027</span>
+              <div class="seal-med sm"><span class="cr">&#9819;</span><span class="ed">Edição</span><span class="mo">jan</span></div>
+            </div>
+            <p class="fr" style="font-size:36px;line-height:0.96;color:#fff;margin:auto 0;">A casa renova o salão<span class="pt">.</span></p>
+            <div>
+              <p style="font-family:var(--f-serif);font-style:italic;font-size:12px;color:rgba(255,255,255,0.88);margin-bottom:9px;">Curadoria por Andreia.</p>
+              <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;">
+                <span class="mono" style="font-size:7.5px;color:rgba(255,255,255,0.7);">15 a 31 &middot; agendamento</span>
+                <span class="offer-tag" style="font-size:8px;">até 40%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="mcap">1080 × 1920. Texto fora das margens de segurança do topo e da base.</p>
+      </div>
+      <div>
+        <div class="frame f32">
+          <div class="bg" style="background-image:url('imagens/imperador_salao_showroom.jpg');"></div>
+          <div class="scr"></div>
+          <div class="inner" style="padding:26px 32px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+              <span class="mono" style="font-size:9px;color:rgba(255,255,255,0.78);">Imperador Home Design &middot; Cianorte/PR</span>
+              <div class="seal-med"><span class="cr">&#9819;</span><span class="ed">Edição</span><span class="mo">janeiro</span></div>
+            </div>
+            <div>
+              <p class="fr" style="font-size:54px;line-height:0.95;color:#fff;margin-bottom:14px;max-width:13ch;">A casa renova o salão<span class="pt">.</span></p>
+              <div style="display:flex;justify-content:space-between;align-items:center;gap:24px;border-top:1px solid rgba(200,154,85,0.45);padding-top:12px;">
+                <span style="font-family:var(--f-serif);font-style:italic;font-size:14px;color:rgba(255,255,255,0.9);">15 a 31 de janeiro &middot; curadoria por Andreia.</span>
+                <span class="offer-tag" style="font-size:10px;white-space:nowrap;">peças com até 40%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="mcap">Fachada do prédio novo de outubro/2026. Mesma hierarquia, escala maior.</p>
+      </div>
+    </div>
+
+    <div class="mlabel" style="margin-top:34px;">Carrossel · explica a condição em quatro telas</div>
+    <div class="mrow" style="grid-template-columns:repeat(4,1fr);">
+      <div>
+        <div class="frame f45">
+          <div class="bg" style="background-image:url('imagens/imperador_salao_showroom.jpg');"></div>
+          <div class="scr"></div>
+          <div class="inner" style="padding:16px 16px;">
+            <div style="display:flex;justify-content:flex-end;"><div class="seal-med sm"><span class="cr">&#9819;</span><span class="ed">Edição</span><span class="mo">jan</span></div></div>
+            <p class="fr" style="font-size:24px;line-height:1;color:#fff;">A casa renova o salão<span class="pt">.</span></p>
+          </div>
+        </div>
+        <p class="mcap" style="text-align:center;">1 · capa, o convite</p>
+      </div>
+      <div>
+        <div class="frame f45">
+          <div class="bg" style="background-image:url('imagens/imperador_salao_showroom.jpg');"></div>
+          <div class="scr"></div>
+          <div class="inner" style="padding:16px 16px;justify-content:flex-end;">
+            <span class="mono" style="font-size:7px;color:var(--mostarda);margin-bottom:6px;">A condição</span>
+            <p class="fr" style="font-size:19px;line-height:1.05;color:#fff;margin-bottom:8px;">Edição de janeiro<span class="pt">.</span></p>
+            <span class="offer-tag" style="font-size:8px;align-self:flex-start;">peças com até 40%</span>
+          </div>
+        </div>
+        <p class="mcap" style="text-align:center;">2 · a condição</p>
+      </div>
+      <div>
+        <div class="frame f45">
+          <div class="bg" style="background-image:url('imagens/imperador_salao_showroom.jpg');"></div>
+          <div class="scr"></div>
+          <div class="inner" style="padding:16px 16px;justify-content:flex-end;">
+            <span class="mono" style="font-size:7px;color:var(--mostarda);margin-bottom:6px;">A seleção</span>
+            <p class="fr" style="font-size:18px;line-height:1.1;color:#fff;">Sofás, mesas e estofados, escolhidos a dedo<span class="pt">.</span></p>
+          </div>
+        </div>
+        <p class="mcap" style="text-align:center;">3 · a seleção</p>
+      </div>
+      <div>
+        <div class="frame f45">
+          <div class="bg" style="background-image:url('imagens/imperador_salao_showroom.jpg');"></div>
+          <div class="scr"></div>
+          <div class="inner" style="padding:16px 16px;justify-content:flex-end;">
+            <span class="mono" style="font-size:7px;color:var(--mostarda);margin-bottom:6px;">O atendimento</span>
+            <p class="fr" style="font-size:18px;line-height:1.1;color:#fff;">Venha quando puder, com hora marcada<span class="pt">.</span></p>
+            <span class="mono" style="font-size:7px;color:rgba(255,255,255,0.7);margin-top:8px;">15 a 31 &middot; WhatsApp</span>
+          </div>
+        </div>
+        <p class="mcap" style="text-align:center;">4 · o atendimento</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTE 5 -->
+  <section data-p="5">
+    <div class="ph"><span class="n">Parte 5</span><span class="t">Fazer e evitar</span><span class="tag">disciplina da promo</span></div>
+    <p class="pintro">O resumo operacional. Antes de publicar qualquer condição comercial, a peça passa por esta lista.</p>
+    <div class="vocab">
+      <div class="vbox">
+        <div class="k">Fazer</div>
+        <p style="font-family:var(--f-serif);font-size:14px;line-height:1.55;color:var(--tinta);margin-bottom:9px;"><strong>Nomear o momento.</strong> Edição, renovação, convite. A oferta ganha nome de batismo.</p>
+        <p style="font-family:var(--f-serif);font-size:14px;line-height:1.55;color:var(--tinta);margin-bottom:9px;"><strong>Foto inteira, oferta em etiqueta mostarda.</strong> O benefício aparece, contido.</p>
+        <p style="font-family:var(--f-serif);font-size:14px;line-height:1.55;color:var(--tinta);margin-bottom:9px;"><strong>Coroa no alto, só na promo.</strong> É a única família social com o selo.</p>
+        <p style="font-family:var(--f-serif);font-size:14px;line-height:1.55;color:var(--tinta);margin-bottom:9px;margin-bottom:0;"><strong>Calendário fixo.</strong> Janeiro, abril, outubro. Fora disso, silêncio.</p>
+      </div>
+      <div class="vbox no">
+        <div class="k">Evitar</div>
+        <p style="font-family:var(--f-serif);font-size:14px;line-height:1.55;color:var(--tinta);margin-bottom:9px;"><strong>Linguagem de pressão.</strong> Corra, última chance, imperdível.</p>
+        <p style="font-family:var(--f-serif);font-size:14px;line-height:1.55;color:var(--tinta);margin-bottom:9px;"><strong>Vocabulário de varejo.</strong> Liquidação, queima, saldão, black.</p>
+        <p style="font-family:var(--f-serif);font-size:14px;line-height:1.55;color:var(--tinta);margin-bottom:9px;"><strong>Número como manchete.</strong> A oferta é condição, nunca o título isolado.</p>
+        <p style="font-family:var(--f-serif);font-size:14px;line-height:1.55;color:var(--tinta);margin-bottom:9px;margin-bottom:0;"><strong>Cor de queima.</strong> Vermelho gritado não é a casa.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <p>A promo deixa de ser ruído e vira parte da voz da casa. A oferta existe, é clara, e mesmo assim soa como convite. É isso que separa premium de varejo: não a ausência de número, mas o tom em que ele é dito.</p>
+    <p class="sig">ASD Comunicação · Anexo do sistema · Família 06 · Imperador Home Design · Junho 2026</p>
+  </footer>
+
+</div>
+</body>
+</html>
